@@ -1,0 +1,68 @@
+.header{
+    float: left;
+    background-color:#ffffff;
+    width: calc(100% - 201px);
+    height: 48px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.header .header-infor{
+    height: 100%;
+    width: auto;
+    padding-left: 16px;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+}
+.header .header-infor-icon{
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../content/icons/arrow-204-16.png);
+}
+.header .header-infor-icon:hover{
+    cursor: pointer;
+}
+.header .header-user{
+    height: 100%;
+    width: auto;
+    float: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+.header-user .header-notification{
+    width: 16px;
+    height: 16px;
+    background-image: url(../../content/icons/bell-2-16.png);
+    margin-left: auto;
+}
+.header-user .header-notification:hover{
+    cursor: pointer;
+}
+.header-user .user-avatar{
+    width: 30px;
+    height: 30px;
+    background-image: url(../../content/icons/avatar-default.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.header-user .user-avatar:hover{
+    cursor: pointer;
+}
+.header-user .header-option{
+    width: 16px;
+    height: 16px;
+    background-image: url(../../content/icons/option.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.header-user .header-option:hover{
+    cursor: pointer;
+}
