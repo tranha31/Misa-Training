@@ -13,15 +13,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-weight: bold;
+    font-family: GoogleSans-Bold;
 }
-.header .header-infor-icon{
-    margin-left: 10px;
-    width: 16px;
-    height: 16px;
-    background-image: url(../../content/icons/arrow-204-16.png);
+.header .header-infor-name{
+    border: none;
+    padding-right: 10px;
+    font-family: GoogleSans-Bold;
 }
-.header .header-infor-icon:hover{
+.header .header-infor-name:hover{
     cursor: pointer;
 }
 .header .header-user{

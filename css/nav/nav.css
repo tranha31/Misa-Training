@@ -35,7 +35,7 @@
     width: 100%;
     height: 44px;
     color: #000000;
-    font-weight: normal;
+    font-family: GoogleSans-Regular;
     color: #454545;
     display: flex;
     flex-direction: row;
@@ -45,12 +45,17 @@
     background-color: #e5e5e5;
     cursor: pointer;
     color: #000000;
-    font-weight: normal;
+    font-family: GoogleSans-Regular;
 }
 .nav .nav-content-focus{
     background-color: #019160;
     color: #ffffff;
-    font-weight: bold;
+    font-family: GoogleSans-Bold;
+}
+.nav .nav-content:focus{
+    background-color: #019160;
+    color: #ffffff;
+    font-family: GoogleSans-Bold;
 }
 .nav-content .nav-content-icon{
     width: 20px;
