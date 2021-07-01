@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    padding-bottom: 8px;
+    
 }
 .content-bar input{
     height: 36px;
@@ -64,12 +64,14 @@
 }
 .content-bar .content-select{
     height: 40px;
-    width: 130px;
+    width: 166px;
     border-radius: 4px;
     outline: none;
     border: 1px solid #bbbbbb;
     margin-left: 16px;
     line-height: 40px;
+    padding-left: 16px;
+    padding-right: 12px;
 }
 .content-bar .content-select:hover{
     cursor: pointer;
@@ -100,20 +102,94 @@
     border: none;
 }
 .content .grid{
-    height: calc(100vh - 228px);
+    height: calc(100vh - 219px);
 }
+/*Page navigation*/
 .page-navigation{
     width: 100%;
     height: 56px;
-    background-color: aqua;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e5e5e5;
 }
-.table-body .salary, .table-header .salary{
-    text-align: right;
-    width: 120px;
+.page-navigation .total-employees{
+    margin-left: 16px;
 }
-.table-body .email, .table-header .email{
-    max-width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.page-navigation .amount-employee-page{
+    position: absolute;
+    right: 16px;
+}
+.navigations{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navigations div{
+    border: 1px solid transparent;
+}
+.navigations div:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.navigations div:active{
+    border-color: #e5e5e5;
+}
+.navigations .page:active{
+    border-color: none;
+    background-color: #019160;
+    color: #ffffff;
+}
+.navigations .move{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.navigations .next{
+    background-image: url(../../content/icons/next.png);
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: center;
+    opacity: 0.8;
+}
+.navigations .last{
+    background-image: url(../../content/icons/right-arrow.png);
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: center;
+    opacity: 0.75;
+}
+.navigations .pre{
+    background-image: url(../../content/icons/next.png);
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: center;
+    opacity: 0.8;
+    transform: rotate(180deg);
+}
+.navigations .first{
+    background-image: url(../../content/icons/right-arrow.png);
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: center;
+    opacity: 0.75;
+    transform: rotate(180deg);
+}
+.navigations .page{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    border: 1px solid #e9ebee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigations .p{
+    margin-left: 8px;
 }

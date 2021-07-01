@@ -52,7 +52,7 @@
     color: #ffffff;
     font-family: GoogleSans-Bold;
 }
-.nav .nav-content:focus{
+.nav .nav-content:active{
     background-color: #019160;
     color: #ffffff;
     font-family: GoogleSans-Bold;
