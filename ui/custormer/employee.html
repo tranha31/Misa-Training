@@ -15,15 +15,30 @@
     </head>
 
     <body>
-
-        <div class="nav">
-            <div class="nav-top">
-                <div class="nav-top-img"></div>
-                <div class="nav-top-logo"></div>
+        <div class="header">
+            <div class="header-top">
+                <div id="menu" class="header-top-img" onclick="resizemenu()"></div>
+                <div class="header-top-logo"></div>
             </div>
+            <div class="header-infor">
+                <select class="header-infor-name" style="outline: none;">
+                    <option>Nhà hàng Biển Đông</option>
+                </select>
+                
+            </div>
+            <div class="header-user">
+                <div class="header-notification"></div>
+                <div class="user-avatar"></div>
+                <div class="user-name">Trần Quang Hà</div>
+                <div class="header-option"></div>
+            </div>
+        </div>
+
+        <div class="nav" id="nav">
+            
             <div class="nav-content">
                 <div class="nav-content-icon nav-content-icon1"></div>
-                <div class="nav-content-text">Tổng quan</div>
+                <div class="nav-content-text" id="1">Tổng quan</div>
             </div>
             <div class="nav-content">
                 <div class="nav-content-icon nav-content-icon2"></div>
@@ -44,26 +59,13 @@
 
         </div>
 
-        <div class="header">
-            <div class="header-infor">
-                <select class="header-infor-name">
-                    <option>Nhà hàng Biển Đông</option>
-                </select>
-                
-            </div>
-            <div class="header-user">
-                <div class="header-notification"></div>
-                <div class="user-avatar"></div>
-                <div class="user-name">Trần Quang Hà</div>
-                <div class="header-option"></div>
-            </div>
-        </div>
+        
 
-        <div class="content">
+        <div class="content" id="content">
             <div class="content-title">
                 <div class="title">Danh sách nhân viên</div>
-                <button class="a-btn a-btn-left">
-                    <div class="btn-left-content" onclick="displayForm()">Thêm nhân viên</div>
+                <button class="a-btn a-btn-left" id="addemployee">
+                    <div class="btn-left-content" >Thêm nhân viên</div>
                 </button>
             </div>
             <div class="content-bar">
@@ -84,7 +86,8 @@
                 <table class="list-employee">
                     <thead>
                         <tr>
-                            <th class="code">Mã nhân viên</th>
+                            <th class="code"></th>
+                            <th>Mã nhân viên</th>
                             <th>Họ và tên</th>
                             <th>Giới tính</th>
                             <th>Ngày sinh</th>
@@ -98,7 +101,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -110,7 +114,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -122,7 +127,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -134,7 +140,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -146,7 +153,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -158,7 +166,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -170,7 +179,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -182,7 +192,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -194,7 +205,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -206,7 +218,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -218,7 +231,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -230,7 +244,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -242,7 +257,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -254,7 +270,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -266,7 +283,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -278,7 +296,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -290,7 +309,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -302,7 +322,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -314,7 +335,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -326,7 +348,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -338,7 +361,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -350,7 +374,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -362,7 +387,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -374,7 +400,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -386,7 +413,8 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
+                            <td class="code"><input type="checkbox"/></td>
+                            <td>NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
                             <td>11/08/1978</td>
@@ -424,7 +452,7 @@
                 </div>
             </div>
         </div> 
-
+        
         <form id="form-infor" method="POST" action="" class="employee-information" enctype="multipart/form-data">
             <div class="form-header">
                 <div>THÔNG TIN NHÂN VIÊN</div>
@@ -444,7 +472,7 @@
                         <div class="content-information">
                             <div class="item em-code item1">
                                 <label>Mã nhân viên (<span>*</span>)</label>
-                                <input type="text" name="em-code">
+                                <input type="text" name="em-code" id="em-code">
                             </div>
                             <div class="item em-name">
                                 <label>Họ và tên (<span>*</span>)</label>
@@ -532,15 +560,38 @@
                 
             </div>
         </form>
+        <div class="background-form" id="b-form"></div>
     </body>
     <script>
-        function displayForm(){
-            console.log("aaaaaaa0");
-            document.getElementsById("form-infor").style.display = "flex";
-            document.getElementsById("form-infor").style.flexDriection = "column";
-        }
+        document.getElementById("addemployee").addEventListener('click', () => {
+            document.getElementById("form-infor").style.display = "flex";
+            document.getElementById("form-infor").style.flexDirection = "column";
+            document.getElementById("b-form").style.display = "block";
+            document.getElementById("em-code").focus();
+        });
+        
         function hiddenForm(){
             document.getElementById("form-infor").style.display = "none";
+            document.getElementById("b-form").style.display = "none";
+        }
+        function resizemenu(){
+            if(document.getElementById("1").style.display == "none"){
+                document.getElementById("nav").style.width = "200px";
+                document.getElementById("content").style.width = "calc(100% - 201px)";
+                a = document.getElementsByClassName("nav-content-text");
+                for(i=0; i<a.length; i++){
+                    a[i].style.display = "block";
+                }
+            }
+            else{
+                document.getElementById("nav").style.width = "60px";
+                document.getElementById("content").style.width = "calc(100% - 61px)";
+                a = document.getElementsByClassName("nav-content-text");
+                for(i=0; i<a.length; i++){
+                    a[i].style.display = "none";
+                }
+            }
+            
         }
     </script>
 </html>

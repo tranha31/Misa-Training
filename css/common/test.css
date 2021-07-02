@@ -1,0 +1,43 @@
+.select{
+    width: 150px;
+    height: 40px;
+    border: 1px solid red;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    
+}
+.content{
+    width: calc(100% - 16px);
+}
+.choose{
+    border: 1px solid green;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../content/icons/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 4px;
+}
+.choose:hover{
+    cursor: pointer;
+}
+.option{
+    height: 100px;
+    width: 150px;
+    border: 1px solid red;
+    position: absolute;
+    top: 55px;
+    border-radius: 4px;
+    overflow-y: auto;
+    display: none;
+}
+.item{
+    width: auto;
+    height: 50px;
+    background-color: cornsilk;
+    border: 1px solid ;
+}
+.item:hover{
+    cursor: pointer;
+}

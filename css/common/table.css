@@ -10,20 +10,29 @@ input[type="checkbox"]{
     border-radius: 4px;
     cursor: pointer;
 }
+input[type="checkbox"]:active{
+    box-shadow: 0 1px 2px #019160, inset 0px 1px 3px #019160;
+}
+
 input[type="checkbox"]:checked{
+    box-shadow: 0 1px 2px #019160, inset 0px 1px 3px #019160, inset 15px 10px -12px #019160;
     background-color: #019160;
+    color: #019160;
+    filter: hue-rotate(-62deg);
 }
 .list-employee{
     width: 100%;
     height: 100%;
     text-align: left;
     border-collapse: collapse;
+    
 }
 .list-employee tr{
     height: 48px;
 }
 .list-employee td, th{
     border-bottom: 1px solid #e5e5e5;
+    min-width: 100px;
 }
 .list-employee thead{
     display: table;
@@ -48,14 +57,17 @@ tbody > tr:nth-child(odd) >td{
 }
 .code{
     padding-left: 16px;
+    width: 50px;
 }
 .email{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 300px;
+    width: 200px;
 }
 .salary{
+    width: 120px;
     text-align: right;
     padding-right: 40px;
 }

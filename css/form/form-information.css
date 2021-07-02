@@ -1,4 +1,13 @@
 
+.background-form{
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    background-color: #bbbbbb;
+    display: none;
+}
 .employee-information{
     width: 900px;
     height: 98vh;
@@ -9,9 +18,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #e5e5e5;
-    overflow:hidden;
+    overflow: hidden;
     display: none;
     z-index: 20;
+    min-width: 500px;
 }
 .employee-information .form-header{
     display: flex;
@@ -43,9 +53,11 @@
     display: flex;
     flex-direction: row;
     border: none;
+    overflow: auto;
+    min-height: 500px;
 }
 .form-content .avatar{
-    width: 25%;
+    width: 250px;
     height: 100%;
     background-color: #ffffff;
     text-align: center;
@@ -73,7 +85,7 @@
 }
 
 .form-content .information{
-    width: 75%;
+    width: 650px;
     height: 100%;
     background-color: #ffffff;
     display: flex;
@@ -82,14 +94,11 @@
 .information .common-information{
     margin-top: 16px;
     margin-left: 16px;
-    height: 55%;
-    width: 100%;
+    height: auto;
     margin-bottom: 24px;
-
 }
 .information .job-information{
-    height: 40%;
-    width: 100%;
+    height: auto;
     margin-left: 16px;
 }
 .title-infor{
@@ -102,19 +111,20 @@
 .item{
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 47%;
     height: 72px;
     float: left;
 }
 .select-gen{
+    
     height: 40px;
-    width: 100%;
     border-radius: 4px;
     border: 1px solid #e5e5e5;
 }
 .select-gen:focus{
     border-color: #01B075;
 }
+
 .item1{
     margin-right: 16px;
 }
@@ -138,6 +148,7 @@
     background-position: 16px center;
     padding-left: 32px;
     margin-left: 24px;
+    margin-right: 7px;
 }
 .cancel{
     background-color: transparent;

@@ -3,7 +3,7 @@
     height: calc(100vh - 49px);
     background-color: #E9EBEE;
     float: left;
-    
+    border-top: 1px solid #e5e5e5;
 }
 .content-title{
     width: 100%;
@@ -103,6 +103,7 @@
 }
 .content .grid{
     height: calc(100vh - 219px);
+    min-height: 400px;
 }
 /*Page navigation*/
 .page-navigation{
@@ -136,6 +137,11 @@
     border-color: #e5e5e5;
 }
 .navigations .page:active{
+    border-color: none;
+    background-color: #019160;
+    color: #ffffff;
+}
+.navigations .page-active{
     border-color: none;
     background-color: #019160;
     color: #ffffff;
