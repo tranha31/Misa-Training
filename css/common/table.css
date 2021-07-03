@@ -57,7 +57,6 @@ tbody > tr:nth-child(odd) >td{
 }
 .code{
     padding-left: 16px;
-    width: 50px;
 }
 .email{
     white-space: nowrap;

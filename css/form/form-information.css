@@ -73,7 +73,8 @@
     margin-top: 16px;
     background-image: url(../../content/images/default-avatar.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     display: block;
 }
 .avatar .employee-avatar:hover{
@@ -106,17 +107,16 @@
     margin-bottom: 4px;
 }
 .content-information{
-    margin-top: 24px;
+    margin-top: 10px;
 }
 .item{
     display: flex;
     flex-direction: column;
     width: 47%;
-    height: 72px;
+    height: 80px;
     float: left;
 }
 .select-gen{
-    
     height: 40px;
     border-radius: 4px;
     border: 1px solid #e5e5e5;
@@ -162,4 +162,14 @@
 .form-active{
     display: flex;
     flex-direction: column;
+}
+.item .select-on-form{
+    padding-left: 0;
+    width: 297px;
+}
+.item .icon-form{
+    left: 275px;
+}
+.item .select-on-form .options-container-form{
+    width: 297px;
 }
