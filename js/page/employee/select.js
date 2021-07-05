@@ -1,3 +1,8 @@
+/** --------------------------------------------
+ * Thêm sự kiện ẩn hiện select box
+ * @param {Number} i số hiệu của id đối tượng
+ * Create by: TQHa (5/7/2021)
+ */
 function setEvent(i){
     let tmp =  ".selected" + i;
     let selected = document.querySelector(tmp);
@@ -30,7 +35,9 @@ function setEvent(i){
     });
     
 }
-var boxArray = ['content-selected0', 'content-selected1', 'content-selected2', 'content-selected3', 'content-selected4', 'content-selected5']
+//Tạo sự kiện nhấn ra ngoài thì ẩn select box
+var boxArray = ['content-selected0', 'content-selected1', 'content-selected2', 'content-selected3', 'content-selected4',
+                'content-selected5', 'content-selected6', 'content-selected7']
 window.addEventListener('mouseup', function(e){
     for(var i=0; i<boxArray.length; i++){
         var box = document.getElementById(boxArray[i]);

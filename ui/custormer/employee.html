@@ -18,13 +18,27 @@
     <body>
         <div class="header">
             <div class="header-top" id="header-top">
-                <div id="menu" class="header-top-img" onclick="resizemenu()"></div>
+                <div id="menu" class="header-top-img" onclick="resizeMenu()"></div>
                 <div class="header-top-logo"></div>
             </div>
             <div class="header-infor">
-                <select class="header-infor-name" style="outline: none;">
-                    <option>Nhà hàng Biển Đông</option>
-                </select>
+                <div class="select-container" onmouseup="setEvent(6)">
+          
+                    <div class="select-box select-box-header">
+                      <div class="selected selected6 select-header">
+                        <div class="content-selected" id="content-selected6">Nhà hàng Biển Đông</div>
+                        <div class="icon-select icon-form icon-select-header" id="selected-6"></div>
+                      </div>
+                      <div class="options-container options-container6">
+                        
+                        <div class="option option-selected option6">
+                          <input type="radio" class="radio" id="company1" name="company"/>
+                          <label for="company1">Nhà hàng Biển Đông</label>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
                 
             </div>
             <div class="header-user">
@@ -49,6 +63,10 @@
                 <div class="nav-content-icon nav-content-icon3"></div>
                 <div class="nav-content-text">Mua hàng</div>
             </div>
+            <div class="nav-content">
+              <div class="nav-content-icon nav-content-icon4"></div>
+              <div class="nav-content-text">Danh mục khách hàng</div>
+          </div>
             <div class="nav-content" id="menu-4">
                 <div class="nav-content-icon nav-content-icon4"></div>
                 <div class="nav-content-text">Danh mục nhân viên</div>
@@ -71,7 +89,7 @@
             </div>
             <div class="content-bar">
                 <input type="text" class="filter-bar" style="height: 40px;" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"/>
-                <div class="select-container" onclick="setEvent(0)">
+                <div class="select-container" onmouseup="setEvent(0)">
           
                     <div class="select-box">
                       <div class="selected selected0"> 
@@ -96,7 +114,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="select-container" onclick="setEvent(1)">
+                  <div class="select-container" onmouseup="setEvent(1)">
           
                     <div class="select-box" >
                       <div class="selected selected1">
@@ -130,7 +148,7 @@
                             <th class="code">Mã nhân viên</th>
                             <th>Họ và tên</th>
                             <th>Giới tính</th>
-                            <th>Ngày sinh</th>
+                            <th class="date-of-brith">Ngày sinh</th>
                             <th>Điện thoại</th>
                             <th class="email">Email</th>
                             <th>Chức vụ</th>
@@ -144,7 +162,7 @@
                             <td class="code">NV-532408</td>
                             <td>Hồ Văn Long</td>
                             <td>Nam</td>
-                            <td>11/08/1978</td>
+                            <td class="date-of-brith">11/08/1978</td>
                             <td>0940458449</td>
                             <td class="email">cuon@example.com</td>
                             <td>Giám đốc</td>
@@ -153,293 +171,293 @@
                             <td>Đang thử việc</td>
                         </tr>
                         <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td>11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
+                          <td class="code">NV-532408</td>
+                          <td>Hồ Văn Long</td>
+                          <td>Nam</td>
+                          <td class="date-of-brith">11/08/1978</td>
+                          <td>0940458449</td>
+                          <td class="email">cuon@example.com</td>
+                          <td>Giám đốc</td>
+                          <td>Phòng nhân sự</td>
+                          <td class="salary">17.739.391</td>
+                          <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                      </tr>
+                      <tr>
+                        <td class="code">NV-532408</td>
+                        <td>Hồ Văn Long</td>
+                        <td>Nam</td>
+                        <td class="date-of-brith">11/08/1978</td>
+                        <td>0940458449</td>
+                        <td class="email">cuon@example.com</td>
+                        <td>Giám đốc</td>
+                        <td>Phòng nhân sự</td>
+                        <td class="salary">17.739.391</td>
+                        <td>Đang thử việc</td>
+                    </tr>
+                    <tr>
+                      <td class="code">NV-532408</td>
+                      <td>Hồ Văn Long</td>
+                      <td>Nam</td>
+                      <td class="date-of-brith">11/08/1978</td>
+                      <td>0940458449</td>
+                      <td class="email">cuon@example.com</td>
+                      <td>Giám đốc</td>
+                      <td>Phòng nhân sự</td>
+                      <td class="salary">17.739.391</td>
+                      <td>Đang thử việc</td>
+                  </tr>
+                  <tr>
+                    <td class="code">NV-532408</td>
+                    <td>Hồ Văn Long</td>
+                    <td>Nam</td>
+                    <td class="date-of-brith">11/08/1978</td>
+                    <td>0940458449</td>
+                    <td class="email">cuon@example.com</td>
+                    <td>Giám đốc</td>
+                    <td>Phòng nhân sự</td>
+                    <td class="salary">17.739.391</td>
+                    <td>Đang thử việc</td>
+                </tr>
+                <tr>
+                  <td class="code">NV-532408</td>
+                  <td>Hồ Văn Long</td>
+                  <td>Nam</td>
+                  <td class="date-of-brith">11/08/1978</td>
+                  <td>0940458449</td>
+                  <td class="email">cuon@example.com</td>
+                  <td>Giám đốc</td>
+                  <td>Phòng nhân sự</td>
+                  <td class="salary">17.739.391</td>
+                  <td>Đang thử việc</td>
+              </tr>
+              <tr>
+                <td class="code">NV-532408</td>
+                <td>Hồ Văn Long</td>
+                <td>Nam</td>
+                <td class="date-of-brith">11/08/1978</td>
+                <td>0940458449</td>
+                <td class="email">cuon@example.com</td>
+                <td>Giám đốc</td>
+                <td>Phòng nhân sự</td>
+                <td class="salary">17.739.391</td>
+                <td>Đang thử việc</td>
+            </tr>
+            <tr>
+              <td class="code">NV-532408</td>
+              <td>Hồ Văn Long</td>
+              <td>Nam</td>
+              <td class="date-of-brith">11/08/1978</td>
+              <td>0940458449</td>
+              <td class="email">cuon@example.com</td>
+              <td>Giám đốc</td>
+              <td>Phòng nhân sự</td>
+              <td class="salary">17.739.391</td>
+              <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+        </tr>
+        <tr>
+          <td class="code">NV-532408</td>
+          <td>Hồ Văn Long</td>
+          <td>Nam</td>
+          <td class="date-of-brith">11/08/1978</td>
+          <td>0940458449</td>
+          <td class="email">cuon@example.com</td>
+          <td>Giám đốc</td>
+          <td>Phòng nhân sự</td>
+          <td class="salary">17.739.391</td>
+          <td>Đang thử việc</td>
+      </tr>
+      <tr>
+        <td class="code">NV-532408</td>
+        <td>Hồ Văn Long</td>
+        <td>Nam</td>
+        <td class="date-of-brith">11/08/1978</td>
+        <td>0940458449</td>
+        <td class="email">cuon@example.com</td>
+        <td>Giám đốc</td>
+        <td>Phòng nhân sự</td>
+        <td class="salary">17.739.391</td>
+        <td>Đang thử việc</td>
+    </tr>
+    <tr>
+      <td class="code">NV-532408</td>
+      <td>Hồ Văn Long</td>
+      <td>Nam</td>
+      <td class="date-of-brith">11/08/1978</td>
+      <td>0940458449</td>
+      <td class="email">cuon@example.com</td>
+      <td>Giám đốc</td>
+      <td>Phòng nhân sự</td>
+      <td class="salary">17.739.391</td>
+      <td>Đang thử việc</td>
+  </tr>
+  <tr>
+    <td class="code">NV-532408</td>
+    <td>Hồ Văn Long</td>
+    <td>Nam</td>
+    <td class="date-of-brith">11/08/1978</td>
+    <td>0940458449</td>
+    <td class="email">cuon@example.com</td>
+    <td>Giám đốc</td>
+    <td>Phòng nhân sự</td>
+    <td class="salary">17.739.391</td>
+    <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
+<tr>
+  <td class="code">NV-532408</td>
+  <td>Hồ Văn Long</td>
+  <td>Nam</td>
+  <td class="date-of-brith">11/08/1978</td>
+  <td>0940458449</td>
+  <td class="email">cuon@example.com</td>
+  <td>Giám đốc</td>
+  <td>Phòng nhân sự</td>
+  <td class="salary">17.739.391</td>
+  <td>Đang thử việc</td>
+</tr>
                     </tbody>
                 </table>
                 
@@ -460,7 +478,31 @@
                     <div class="move last"></div>
                 </div>
                 <div class="amount-employee-page">
-                    25 nhân viên/trang
+                  <div class="select-container" onmouseup="setEvent(7)">
+          
+                    <div class="select-box">
+                      <div class="selected selected7"> 
+                        <div class="content-selected" id="content-selected7" >25 nhân viên/trang</div>
+                        <div class="icon-select" id="selected-7" ></div>
+                      </div>
+                      <div class="options-container options-container7 options-container-footer">
+                        
+                        <div class="option option-selected option7">
+                          <input type="radio" class="radio" id="amount-15emp" name="amount"/>
+                          <label for="amount-15emp">15 nhân viên/trang</label>
+                        </div>
+                        <div class="option option7">
+                          <input type="radio" class="radio" id="amount-20emp" name="amount"/>
+                          <label for="amount-20emp">20 nhân viên/trang</label>
+                        </div>
+                        <div class="option option7">
+                          <input type="radio" class="radio" id="amount-25emp" name="amount"/>
+                          <label for="amount-25emp">25 nhân viên/trang</label>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div> 
@@ -496,7 +538,7 @@
                             </div>
                             <div class="item em-gen">
                                 <label>Giới tính</label>
-                                <div class="select-container" onclick="setEvent(2)">
+                                <div class="select-container" onmouseup="setEvent(2)">
           
                                     <div class="select-box select-on-form">
                                       <div class="selected selected2 ">
@@ -549,7 +591,7 @@
                         <div class="content-information">
                         <div class="item item1">
                             <label>Vị trí</label>
-                            <div class="select-container" onclick="setEvent(3)">
+                            <div class="select-container" onmouseup="setEvent(3)">
           
                                 <div class="select-box select-on-form">
                                   <div class="selected selected3 ">
@@ -574,7 +616,7 @@
                         </div>
                         <div class="item item1">
                             <label>Phòng ban</label>
-                            <div class="select-container" onclick="setEvent(4)">
+                            <div class="select-container" onmouseup="setEvent(4)">
           
                                 <div class="select-box select-on-form">
                                   <div class="selected selected4 ">
@@ -610,7 +652,7 @@
                         </div>
                         <div class="item item1">
                             <label>Tình trạng công việc</label>
-                            <div class="select-container" onclick="setEvent(5)">
+                            <div class="select-container" onmouseup="setEvent(5)">
           
                                 <div class="select-box select-on-form">
                                   <div class="selected selected5 ">
@@ -645,7 +687,8 @@
         </form>
         <div class="background-form" id="b-form"></div>
     </body>
-    <script type="text/javascript" src="../../js/select.js"></script>
-    <script type="text/javascript" src="../../js/form.js"></script>
-    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/common/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../js/page/employee/select.js"></script>
+    <script type="text/javascript" src="../../js/page/employee/form.js"></script>
+    
 </html>

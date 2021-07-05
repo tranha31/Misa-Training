@@ -1,17 +1,35 @@
+/** -------------------------------------------
+ * lựa chọn trước mục Danh sách nhân viên
+ * Create by: TQHa (5/7/2021)
+ */
 document.getElementById("menu-4").classList.add("nav-content-focus");
 document.getElementById("p-1").classList.add("page-active");
+
+/** ---------------------------------
+ * Hiển thị form thêm nhân viên
+ * Create by: TQHa (5/7/2021)
+ */
 document.getElementById("addemployee").addEventListener('click', () => {
     document.getElementById("form-infor").style.display = "flex";
     document.getElementById("form-infor").style.flexDirection = "column";
     document.getElementById("b-form").style.display = "block";
     document.getElementById("em-code").focus();
 });
-        
+
+/** ------------------------------
+ * Ẩn form thêm nhân viên
+ * Create by: TQHa (5/7/2021)
+ */        
 function hiddenForm(){
     document.getElementById("form-infor").style.display = "none";
     document.getElementById("b-form").style.display = "none";
 }
-function resizemenu(){
+
+/** ------------------------------
+ * Thu nhỏ kích thước menu
+ * Create by: TQHa (5/7/2021)
+ */
+function resizeMenu(){
     if(document.getElementById("1").style.display == "none"){
         document.getElementById("header-top").style.borderRight = "1px solid #e5e5e5";
         document.getElementById("nav").style.width = "226px";
@@ -32,6 +50,11 @@ function resizemenu(){
     }
             
 }
+/** -------------------------------
+ * Kiểm tra file nhập vào có đúng định dạng. Nếu đúng thì hiển thị
+ * @returns src của ảnh
+ * Create by: TQHa (5/7/2021)
+ */
 function fileValidation(){
     var fileInput = document.getElementById("a-1");
     var filePath = fileInput.value;

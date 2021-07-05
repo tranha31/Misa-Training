@@ -81,4 +81,32 @@
     background-image: url(../../content/icons/check-mark.png);
     background-repeat: no-repeat;
     background-position: 10px center;
+    
+}
+.select-box .option-selected label{
+    color: #ffffff !important;
+}
+.select-container .select-box-header{
+    padding-left: 0;
+}
+.select-box-header .select-header{
+    border: none;
+}
+.selected .icon-select-header{
+    left: 150px;
+}
+.select-box .options-container-footer{
+    top: -128px;
+    right: 0.5px;
+}
+.selected #selected-7{
+    width: 16px;
+    height: 16px;
+    background-image: url(../../content/icons/up-and-down.png) !important;
+    background-size: contain;
+    position: absolute;
+    left: 160px;
+    top: 12px;
+    opacity: 0.6;
+
 }
