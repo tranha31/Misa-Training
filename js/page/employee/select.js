@@ -23,7 +23,7 @@ function setEvent(i){
             var c = element.querySelector("label").innerHTML;
             document.getElementById(y).innerHTML = c;
             optionsList.forEach(o => {
-                console.log(o);
+                //console.log(o);
                 o.classList.remove("option-selected");
             });
             var x = "selected-" + i;

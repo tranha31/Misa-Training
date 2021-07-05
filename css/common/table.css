@@ -52,7 +52,7 @@ input[type="checkbox"]:checked{
     width: 100%;
     table-layout: fixed;
 }
-tbody > tr:nth-child(odd) >td{
+tbody > tr:nth-child(odd){
     background-color: #f4f4f4;
 }
 .code{
@@ -74,6 +74,6 @@ tbody > tr:nth-child(odd) >td{
     text-align: center;
 }
 .list-employee tbody tr:hover{
-    background-color: #e5e5e5;
+    background-color: #e5e5e5 !important;
     cursor: pointer;
 }

@@ -1,330 +1,176 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
 
-        <meta charset="uft-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <title>Misa Cukcuk</title>
-        <link href="../../css/common/common.css" rel="stylesheet"/>
-        <link href="../../css/common/button.css" rel="stylesheet"/>
-        <link href="../../css/common/table.css" rel="stylesheet"/>
-        <link href="../../css/common/select.css" rel="stylesheet"/>
-        <link href="../../css/content/content.css" rel="stylesheet"/>
-        <link href="../../css/header/header.css" rel="stylesheet"/>
-        <link href="../../css/nav/nav.css" rel="stylesheet"/>
-        <link href="../../css/form/form-information.css" rel="stylesheet"/>
-    </head>
+<head>
 
-    <body>
-        <div class="header">
-            <div class="header-top" id="header-top">
-                <div id="menu" class="header-top-img" onclick="resizeMenu()"></div>
-                <div class="header-top-logo"></div>
-            </div>
-            <div class="header-infor">
-                <div class="select-container" onmouseup="setEvent(6)">
-          
-                    <div class="select-box select-box-header">
-                      <div class="selected selected6 select-header">
-                        <div class="content-selected" id="content-selected6">Nhà hàng Biển Đông</div>
-                        <div class="icon-select icon-form icon-select-header" id="selected-6"></div>
-                      </div>
-                      <div class="options-container options-container6">
-                        
-                        <div class="option option-selected option6">
-                          <input type="radio" class="radio" id="company1" name="company"/>
-                          <label for="company1">Nhà hàng Biển Đông</label>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                
-            </div>
-            <div class="header-user">
-                <div class="header-notification"></div>
-                <div class="user-avatar"></div>
-                <div class="user-name">Trần Quang Hà</div>
-                <div class="header-option"></div>
-            </div>
-        </div>
+  <meta charset="uft-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Misa Cukcuk</title>
+  <link href="../../css/common/common.css" rel="stylesheet" />
+  <link href="../../css/common/button.css" rel="stylesheet" />
+  <link href="../../css/common/table.css" rel="stylesheet" />
+  <link href="../../css/common/select.css" rel="stylesheet" />
+  <link href="../../css/content/content.css" rel="stylesheet" />
+  <link href="../../css/header/header.css" rel="stylesheet" />
+  <link href="../../css/nav/nav.css" rel="stylesheet" />
+  <link href="../../css/form/form-information.css" rel="stylesheet" />
+</head>
 
-        <div class="nav" id="nav">
-            
-            <div class="nav-content">
-                <div class="nav-content-icon nav-content-icon1"></div>
-                <div class="nav-content-text" id="1">Tổng quan</div>
-            </div>
-            <div class="nav-content">
-                <div class="nav-content-icon nav-content-icon2"></div>
-                <div class="nav-content-text">Báo cáo</div>
-            </div>
-            <div class="nav-content">
-                <div class="nav-content-icon nav-content-icon3"></div>
-                <div class="nav-content-text">Mua hàng</div>
-            </div>
-            <div class="nav-content">
-              <div class="nav-content-icon nav-content-icon4"></div>
-              <div class="nav-content-text">Danh mục khách hàng</div>
+<body>
+  <div class="header">
+    <div class="header-top" id="header-top">
+      <div id="menu" class="header-top-img" onclick="resizeMenu()"></div>
+      <div class="header-top-logo"></div>
+    </div>
+    <div class="header-infor">
+      <div class="select-container" onmouseup="setEvent(6)">
+
+        <div class="select-box select-box-header">
+          <div class="selected selected6 select-header">
+            <div class="content-selected" id="content-selected6">Nhà hàng Biển Đông</div>
+            <div class="icon-select icon-form icon-select-header" id="selected-6"></div>
           </div>
-            <div class="nav-content" id="menu-4">
-                <div class="nav-content-icon nav-content-icon4"></div>
-                <div class="nav-content-text">Danh mục nhân viên</div>
-            </div>
-            <div class="nav-content">
-                <div class="nav-content-icon nav-content-icon5"></div>
-                <div class="nav-content-text">Thiết lập hệ thống</div>
+          <div class="options-container options-container6">
+
+            <div class="option option-selected option6">
+              <input type="radio" class="radio" id="company1" name="company" />
+              <label for="company1">Nhà hàng Biển Đông</label>
             </div>
 
+          </div>
         </div>
+      </div>
 
-        
+    </div>
+    <div class="header-user">
+      <div class="header-notification"></div>
+      <div class="user-avatar"></div>
+      <div class="user-name">Trần Quang Hà</div>
+      <div class="header-option"></div>
+    </div>
+  </div>
 
-        <div class="content" id="content">
-            <div class="content-title">
-                <div class="title">Danh sách nhân viên</div>
-                <button class="a-btn a-btn-left" id="addemployee">
-                    <div class="btn-left-content" >Thêm nhân viên</div>
-                </button>
+  <div class="nav" id="nav">
+
+    <div class="nav-content">
+      <div class="nav-content-icon nav-content-icon1"></div>
+      <div class="nav-content-text" id="1">Tổng quan</div>
+    </div>
+    <div class="nav-content">
+      <div class="nav-content-icon nav-content-icon2"></div>
+      <div class="nav-content-text">Báo cáo</div>
+    </div>
+    <div class="nav-content">
+      <div class="nav-content-icon nav-content-icon3"></div>
+      <div class="nav-content-text">Mua hàng</div>
+    </div>
+    <div class="nav-content">
+      <div class="nav-content-icon nav-content-icon4"></div>
+      <div class="nav-content-text">Danh mục khách hàng</div>
+    </div>
+    <div class="nav-content" id="menu-4">
+      <div class="nav-content-icon nav-content-icon4"></div>
+      <div class="nav-content-text">Danh mục nhân viên</div>
+    </div>
+    <div class="nav-content">
+      <div class="nav-content-icon nav-content-icon5"></div>
+      <div class="nav-content-text">Thiết lập hệ thống</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="content" id="content">
+    <div class="content-title">
+      <div class="title">Danh sách nhân viên</div>
+      <button class="a-btn a-btn-left" id="addemployee">
+        <div class="btn-left-content">Thêm nhân viên</div>
+      </button>
+    </div>
+    <div class="content-bar">
+      <input type="text" class="filter-bar" style="height: 40px;"
+        placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" />
+      <div class="select-container" onmouseup="setEvent(0)">
+
+        <div class="select-box">
+          <div class="selected selected0">
+            <div class="content-selected" id="content-selected0">Tất cả phòng ban</div>
+            <div class="icon-select" id="selected-0"></div>
+          </div>
+          <div class="options-container options-container0">
+
+            <div class="option option-selected option0">
+              <input type="radio" class="radio" id="all-room" name="category" />
+              <label for="all-room">Tất cả phòng ban</label>
             </div>
-            <div class="content-bar">
-                <input type="text" class="filter-bar" style="height: 40px;" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"/>
-                <div class="select-container" onmouseup="setEvent(0)">
-          
-                    <div class="select-box">
-                      <div class="selected selected0"> 
-                        <div class="content-selected" id="content-selected0" >Tất cả phòng ban</div>
-                        <div class="icon-select" id="selected-0" ></div>
-                      </div>
-                      <div class="options-container options-container0">
-                        
-                        <div class="option option-selected option0">
-                          <input type="radio" class="radio" id="all-room" name="category"/>
-                          <label for="all-room">Tất cả phòng ban</label>
-                        </div>
-                        <div class="option option0">
-                          <input type="radio" class="radio" id="hr-room" name="category"/>
-                          <label for="hr-room">Phòng nhân sự</label>
-                        </div>
-                        <div class="option option0">
-                          <input type="radio" class="radio" id="account-room" name="category"/>
-                          <label for="account-room">Phòng kế toán</label>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="select-container" onmouseup="setEvent(1)">
-          
-                    <div class="select-box" >
-                      <div class="selected selected1">
-                        <div class="content-selected" id="content-selected1">Tất cả vị trí</div>
-                        <div class="icon-select" id="selected-1"></div>
-                      </div>
-                      <div class="options-container options-container1">
-                        
-                        <div class="option option-selected option1">
-                          <input type="radio" class="radio" id="all-position" name="category1"/>
-                          <label for="all-position">Tất cả vị trí</label>
-                        </div>
-                        <div class="option option1">
-                          <input type="radio" class="radio" id="manager" name="category1"/>
-                          <label for="manager">Trưởng phòng</label>
-                        </div>
-                        <div class="option option1">
-                          <input type="radio" class="radio" id="employee" name="category1"/>
-                          <label for="employee">Nhân viên</label>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                <button class="second-btn"></button>
+            <div class="option option0">
+              <input type="radio" class="radio" id="hr-room" name="category" />
+              <label for="hr-room">Phòng nhân sự</label>
             </div>
-            <div class="grid">
-                <table class="list-employee">
-                    <thead>
-                        <tr>
-                            <th class="code">Mã nhân viên</th>
-                            <th>Họ và tên</th>
-                            <th>Giới tính</th>
-                            <th class="date-of-brith">Ngày sinh</th>
-                            <th>Điện thoại</th>
-                            <th class="email">Email</th>
-                            <th>Chức vụ</th>
-                            <th>Phòng ban</th>
-                            <th class="salary">Mức lương cơ bản</th>
-                            <th>Tình trạng công việc</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="code">NV-532408</td>
-                            <td>Hồ Văn Long</td>
-                            <td>Nam</td>
-                            <td class="date-of-brith">11/08/1978</td>
-                            <td>0940458449</td>
-                            <td class="email">cuon@example.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td class="salary">17.739.391</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                          <td class="code">NV-532408</td>
-                          <td>Hồ Văn Long</td>
-                          <td>Nam</td>
-                          <td class="date-of-brith">11/08/1978</td>
-                          <td>0940458449</td>
-                          <td class="email">cuon@example.com</td>
-                          <td>Giám đốc</td>
-                          <td>Phòng nhân sự</td>
-                          <td class="salary">17.739.391</td>
-                          <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                      </tr>
-                      <tr>
-                        <td class="code">NV-532408</td>
-                        <td>Hồ Văn Long</td>
-                        <td>Nam</td>
-                        <td class="date-of-brith">11/08/1978</td>
-                        <td>0940458449</td>
-                        <td class="email">cuon@example.com</td>
-                        <td>Giám đốc</td>
-                        <td>Phòng nhân sự</td>
-                        <td class="salary">17.739.391</td>
-                        <td>Đang thử việc</td>
-                    </tr>
-                    <tr>
-                      <td class="code">NV-532408</td>
-                      <td>Hồ Văn Long</td>
-                      <td>Nam</td>
-                      <td class="date-of-brith">11/08/1978</td>
-                      <td>0940458449</td>
-                      <td class="email">cuon@example.com</td>
-                      <td>Giám đốc</td>
-                      <td>Phòng nhân sự</td>
-                      <td class="salary">17.739.391</td>
-                      <td>Đang thử việc</td>
-                  </tr>
-                  <tr>
-                    <td class="code">NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td class="date-of-brith">11/08/1978</td>
-                    <td>0940458449</td>
-                    <td class="email">cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td class="salary">17.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                  <td class="code">NV-532408</td>
-                  <td>Hồ Văn Long</td>
-                  <td>Nam</td>
-                  <td class="date-of-brith">11/08/1978</td>
-                  <td>0940458449</td>
-                  <td class="email">cuon@example.com</td>
-                  <td>Giám đốc</td>
-                  <td>Phòng nhân sự</td>
-                  <td class="salary">17.739.391</td>
-                  <td>Đang thử việc</td>
-              </tr>
-              <tr>
-                <td class="code">NV-532408</td>
-                <td>Hồ Văn Long</td>
-                <td>Nam</td>
-                <td class="date-of-brith">11/08/1978</td>
-                <td>0940458449</td>
-                <td class="email">cuon@example.com</td>
-                <td>Giám đốc</td>
-                <td>Phòng nhân sự</td>
-                <td class="salary">17.739.391</td>
-                <td>Đang thử việc</td>
-            </tr>
-            <tr>
-              <td class="code">NV-532408</td>
-              <td>Hồ Văn Long</td>
-              <td>Nam</td>
-              <td class="date-of-brith">11/08/1978</td>
-              <td>0940458449</td>
-              <td class="email">cuon@example.com</td>
-              <td>Giám đốc</td>
-              <td>Phòng nhân sự</td>
-              <td class="salary">17.739.391</td>
-              <td>Đang thử việc</td>
+            <div class="option option0">
+              <input type="radio" class="radio" id="account-room" name="category" />
+              <label for="account-room">Phòng kế toán</label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="select-container" onmouseup="setEvent(1)">
+
+        <div class="select-box">
+          <div class="selected selected1">
+            <div class="content-selected" id="content-selected1">Tất cả vị trí</div>
+            <div class="icon-select" id="selected-1"></div>
+          </div>
+          <div class="options-container options-container1">
+
+            <div class="option option-selected option1">
+              <input type="radio" class="radio" id="all-position" name="category1" />
+              <label for="all-position">Tất cả vị trí</label>
+            </div>
+            <div class="option option1">
+              <input type="radio" class="radio" id="manager" name="category1" />
+              <label for="manager">Trưởng phòng</label>
+            </div>
+            <div class="option option1">
+              <input type="radio" class="radio" id="employee" name="category1" />
+              <label for="employee">Nhân viên</label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <button class="second-btn"></button>
+    </div>
+    <div class="grid">
+      <table class="list-employee">
+        <thead>
+          <tr>
+            <th class="code">Mã nhân viên</th>
+            <th>Họ và tên</th>
+            <th>Giới tính</th>
+            <th class="date-of-brith">Ngày sinh</th>
+            <th>Điện thoại</th>
+            <th class="email">Email</th>
+            <th>Chức vụ</th>
+            <th>Phòng ban</th>
+            <th class="salary">Mức lương cơ bản</th>
+            <th>Tình trạng công việc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
           </tr>
           <tr>
             <td class="code">NV-532408</td>
@@ -337,358 +183,514 @@
             <td>Phòng nhân sự</td>
             <td class="salary">17.739.391</td>
             <td>Đang thử việc</td>
-        </tr>
-        <tr>
-          <td class="code">NV-532408</td>
-          <td>Hồ Văn Long</td>
-          <td>Nam</td>
-          <td class="date-of-brith">11/08/1978</td>
-          <td>0940458449</td>
-          <td class="email">cuon@example.com</td>
-          <td>Giám đốc</td>
-          <td>Phòng nhân sự</td>
-          <td class="salary">17.739.391</td>
-          <td>Đang thử việc</td>
-      </tr>
-      <tr>
-        <td class="code">NV-532408</td>
-        <td>Hồ Văn Long</td>
-        <td>Nam</td>
-        <td class="date-of-brith">11/08/1978</td>
-        <td>0940458449</td>
-        <td class="email">cuon@example.com</td>
-        <td>Giám đốc</td>
-        <td>Phòng nhân sự</td>
-        <td class="salary">17.739.391</td>
-        <td>Đang thử việc</td>
-    </tr>
-    <tr>
-      <td class="code">NV-532408</td>
-      <td>Hồ Văn Long</td>
-      <td>Nam</td>
-      <td class="date-of-brith">11/08/1978</td>
-      <td>0940458449</td>
-      <td class="email">cuon@example.com</td>
-      <td>Giám đốc</td>
-      <td>Phòng nhân sự</td>
-      <td class="salary">17.739.391</td>
-      <td>Đang thử việc</td>
-  </tr>
-  <tr>
-    <td class="code">NV-532408</td>
-    <td>Hồ Văn Long</td>
-    <td>Nam</td>
-    <td class="date-of-brith">11/08/1978</td>
-    <td>0940458449</td>
-    <td class="email">cuon@example.com</td>
-    <td>Giám đốc</td>
-    <td>Phòng nhân sự</td>
-    <td class="salary">17.739.391</td>
-    <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-<tr>
-  <td class="code">NV-532408</td>
-  <td>Hồ Văn Long</td>
-  <td>Nam</td>
-  <td class="date-of-brith">11/08/1978</td>
-  <td>0940458449</td>
-  <td class="email">cuon@example.com</td>
-  <td>Giám đốc</td>
-  <td>Phòng nhân sự</td>
-  <td class="salary">17.739.391</td>
-  <td>Đang thử việc</td>
-</tr>
-                    </tbody>
-                </table>
-                
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+          <tr>
+            <td class="code">NV-532408</td>
+            <td>Hồ Văn Long</td>
+            <td>Nam</td>
+            <td class="date-of-brith">11/08/1978</td>
+            <td>0940458449</td>
+            <td class="email">cuon@example.com</td>
+            <td>Giám đốc</td>
+            <td>Phòng nhân sự</td>
+            <td class="salary">17.739.391</td>
+            <td>Đang thử việc</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="page-navigation">
+      <div class="total-employees">
+        Hiển thị 1-25/1000 nhân viên
+      </div>
+      <div class="navigations">
+        <div class="move first"></div>
+        <div class="move pre"></div>
+        <div class="page" id="p-1">1</div>
+        <div class="page p">2</div>
+        <div class="page p">3</div>
+        <div class="page p">4</div>
+        <div class="move next"></div>
+        <div class="move last"></div>
+      </div>
+      <div class="amount-employee-page">
+        <div class="select-container" onmouseup="setEvent(7)">
+
+          <div class="select-box">
+            <div class="selected selected7">
+              <div class="content-selected" id="content-selected7">25 nhân viên/trang</div>
+              <div class="icon-select" id="selected-7"></div>
             </div>
-            
-            <div class="page-navigation">
-                <div class="total-employees">
-                    Hiển thị 1-25/1000 nhân viên
-                </div>
-                <div class="navigations">
-                    <div class="move first"></div>
-                    <div class="move pre"></div>
-                    <div class="page" id="p-1">1</div>
-                    <div class="page p">2</div>
-                    <div class="page p">3</div>
-                    <div class="page p">4</div>
-                    <div class="move next"></div>
-                    <div class="move last"></div>
-                </div>
-                <div class="amount-employee-page">
-                  <div class="select-container" onmouseup="setEvent(7)">
-          
-                    <div class="select-box">
-                      <div class="selected selected7"> 
-                        <div class="content-selected" id="content-selected7" >25 nhân viên/trang</div>
-                        <div class="icon-select" id="selected-7" ></div>
-                      </div>
-                      <div class="options-container options-container7 options-container-footer">
-                        
-                        <div class="option option-selected option7">
-                          <input type="radio" class="radio" id="amount-15emp" name="amount"/>
-                          <label for="amount-15emp">15 nhân viên/trang</label>
-                        </div>
-                        <div class="option option7">
-                          <input type="radio" class="radio" id="amount-20emp" name="amount"/>
-                          <label for="amount-20emp">20 nhân viên/trang</label>
-                        </div>
-                        <div class="option option7">
-                          <input type="radio" class="radio" id="amount-25emp" name="amount"/>
-                          <label for="amount-25emp">25 nhân viên/trang</label>
-                        </div>
-                        
-                      </div>
+            <div class="options-container options-container7 options-container-footer">
+
+              <div class="option option-selected option7">
+                <input type="radio" class="radio" id="amount-15emp" name="amount" />
+                <label for="amount-15emp">15 nhân viên/trang</label>
+              </div>
+              <div class="option option7">
+                <input type="radio" class="radio" id="amount-20emp" name="amount" />
+                <label for="amount-20emp">20 nhân viên/trang</label>
+              </div>
+              <div class="option option7">
+                <input type="radio" class="radio" id="amount-25emp" name="amount" />
+                <label for="amount-25emp">25 nhân viên/trang</label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="form-infor" method="POST" action="" class="employee-information" enctype="multipart/form-data">
+    <div class="form-header">
+      <div>THÔNG TIN NHÂN VIÊN</div>
+      <div class="exist" onclick="hiddenForm()">X</div>
+    </div>
+    <div class="form-content">
+      <div class="avatar">
+        <label class="employee-avatar" id="dislay-avatar" for="a-1">
+          <input type="file" name="avatar" id="a-1" onchange="return fileValidation()">
+        </label>
+        <p style="color: #454545;">(Vui lòng chọn ảnh có định <br>dạng<br> .jpg, .jpeg, .png, .gif.)</p>
+      </div>
+      <div class="information">
+        <div class="common-information">
+          <div class="title-infor">A. THÔNG TIN CHUNG:</div>
+          <div class="row-1"></div>
+          <div class="content-information">
+            <div class="item em-code item1">
+              <label>Mã nhân viên (<span>*</span>)</label>
+              <input type="text" name="em-code" id="em-code">
+            </div>
+            <div class="item em-name">
+              <label>Họ và tên (<span>*</span>)</label>
+              <input type="text" name="em-name">
+            </div>
+            <div class="item em-date item1">
+              <label>Ngày sinh</label>
+              <input type="date" name="em-date">
+            </div>
+            <div class="item em-gen">
+              <label>Giới tính</label>
+              <div class="select-container" onmouseup="setEvent(2)">
+
+                <div class="select-box select-on-form">
+                  <div class="selected selected2 ">
+                    <div class="content-selected" id="content-selected2">Nam</div>
+                    <div class="icon-select icon-form" id="selected-2"></div>
+                  </div>
+                  <div class="options-container options-container2 options-container-form">
+
+                    <div class="option option-selected option2">
+                      <input type="radio" class="radio" id="male" name="em-gen" />
+                      <label for="male">Nam</label>
                     </div>
+                    <div class="option option2">
+                      <input type="radio" class="radio" id="female" name="em-gen" />
+                      <label for="female">Nữ</label>
+                    </div>
+
                   </div>
                 </div>
-            </div>
-        </div> 
-        
-        <form id="form-infor" method="POST" action="" class="employee-information" enctype="multipart/form-data">
-            <div class="form-header">
-                <div>THÔNG TIN NHÂN VIÊN</div>
-                <div class="exist" onclick="hiddenForm()">X</div>
-            </div>
-            <div class="form-content">
-                <div class="avatar">
-                    <label class="employee-avatar" id="dislay-avatar" for="a-1">
-                        <input type="file" name="avatar" id="a-1" onchange="return fileValidation()">
-                    </label>
-                    <p style="color: #454545;">(Vui lòng chọn ảnh có định <br>dạng<br> .jpg, .jpeg, .png, .gif.)</p>
-                </div>
-                <div class="information">
-                    <div class="common-information">
-                        <div class="title-infor">A. THÔNG TIN CHUNG:</div>
-                        <div class="row-1"></div>
-                        <div class="content-information">
-                            <div class="item em-code item1">
-                                <label>Mã nhân viên (<span>*</span>)</label>
-                                <input type="text" name="em-code" id="em-code">
-                            </div>
-                            <div class="item em-name">
-                                <label>Họ và tên (<span>*</span>)</label>
-                                <input type="text" name="em-name">
-                            </div>
-                            <div class="item em-date item1">
-                                <label>Ngày sinh</label>
-                                <input type="date" name="em-date">
-                            </div>
-                            <div class="item em-gen">
-                                <label>Giới tính</label>
-                                <div class="select-container" onmouseup="setEvent(2)">
-          
-                                    <div class="select-box select-on-form">
-                                      <div class="selected selected2 ">
-                                        <div class="content-selected" id="content-selected2">Nam</div>
-                                        <div class="icon-select icon-form" id="selected-2"></div>
-                                      </div>
-                                      <div class="options-container options-container2 options-container-form">
-                                        
-                                        <div class="option option-selected option2">
-                                          <input type="radio" class="radio" id="male" name="em-gen"/>
-                                          <label for="male">Nam</label>
-                                        </div>
-                                        <div class="option option2">
-                                          <input type="radio" class="radio" id="female" name="em-gen"/>
-                                          <label for="female">Nữ</label>
-                                        </div>
-                                        
-                                      </div>
-                                    </div>
-                                  </div>
-                            
-                            </div>
-                            <div class="item em-cmt item1">
-                                <label>Số CMTND/Căn cước (<span>*</span>)</label>
-                                <input type="text" name="em-cmt">
-                            </div>
-                            <div class="item em-date-cmt">
-                                <label>Ngày cấp</label>
-                                <input type="date" name="em-date-cmt">
-                            </div>
-                            <div class="item em-place-cmt item1">
-                                <label>Nơi cấp</label>
-                                <input type="text" name="em-place-cmt">
-                            </div>
-                            <div class="item space">
-                            </div>
-                            <div class="item em-email item1">
-                                <label>Email (<span>*</span>)</label>
-                                <input type="text" name="em-email">
-                            </div>
-                            <div class="item em-phone">
-                                <label>Số điện thoại (<span>*</span>)</label>
-                                <input type="text" name="em-phone">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-information">
-                        <div class="title-infor">B. THÔNG TIN CÔNG VIỆC:</div>
-                        <div class="row-1"></div>
-                        <div class="content-information">
-                        <div class="item item1">
-                            <label>Vị trí</label>
-                            <div class="select-container" onmouseup="setEvent(3)">
-          
-                                <div class="select-box select-on-form">
-                                  <div class="selected selected3 ">
-                                    <div class="content-selected" id="content-selected3">Giám đốc</div>
-                                    <div class="icon-select icon-form" id="selected-3"></div>
-                                  </div>
-                                  <div class="options-container options-container3 options-container-form">
-                                    
-                                    <div class="option option-selected option3">
-                                      <input type="radio" class="radio" id="ceo" name="em-pos"/>
-                                      <label for="ceo">Giám đốc</label>
-                                    </div>
-                                    <div class="option option3">
-                                      <input type="radio" class="radio" id="employee1" name="em-pos"/>
-                                      <label for="employee1">Nhân viên</label>
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                              </div>
-                            
-                        </div>
-                        <div class="item item1">
-                            <label>Phòng ban</label>
-                            <div class="select-container" onmouseup="setEvent(4)">
-          
-                                <div class="select-box select-on-form">
-                                  <div class="selected selected4 ">
-                                    <div class="content-selected" id="content-selected4">Phòng nhân sự</div>
-                                    <div class="icon-select icon-form" id="selected-4"></div>
-                                  </div>
-                                  <div class="options-container options-container4 options-container-form">
-                                    
-                                    <div class="option option-selected option4">
-                                      <input type="radio" class="radio" id="em-room-hr" name="em-room"/>
-                                      <label for="em-room-hr">Phòng nhân sự</label>
-                                    </div>
-                                    <div class="option option4">
-                                      <input type="radio" class="radio" id="em-room-count" name="em-room"/>
-                                      <label for="em-room-count">Phòng kế toán</label>
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="item item1">
-                            <label>Mã số thuế cá nhân</label>
-                            <input type="text" name="em-tax-code">
-                        </div>
-                        <div class="item item1">
-                            <label>Mức lương cơ bản</label>
-                            <input type="text" name="em-basic-salary">
-                        </div>
-                        <div class="item item1">
-                            <label>Ngày ra nhập công ty</label>
-                            <input type="date" name="em-join">
-                        </div>
-                        <div class="item item1">
-                            <label>Tình trạng công việc</label>
-                            <div class="select-container" onmouseup="setEvent(5)">
-          
-                                <div class="select-box select-on-form">
-                                  <div class="selected selected5 ">
-                                    <div class="content-selected" id="content-selected5">Đang làm việc</div>
-                                    <div class="icon-select icon-form" id="selected-5"></div>
-                                  </div>
-                                  <div class="options-container options-container5 options-container-form">
-                                    
-                                    <div class="option option-selected option5">
-                                      <input type="radio" class="radio" id="em-working" name="em-status"/>
-                                      <label for="em-working">Đang làm việc</label>
-                                    </div>
-                                    <div class="option option5">
-                                      <input type="radio" class="radio" id="em-retỉed" name="em-status"/>
-                                      <label for="em-retỉed">Đã nghỉ việc</label>
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                              </div>
+              </div>
 
-                        </div>
-                        </div>
+            </div>
+            <div class="item em-cmt item1">
+              <label>Số CMTND/Căn cước (<span>*</span>)</label>
+              <input type="text" name="em-cmt">
+            </div>
+            <div class="item em-date-cmt">
+              <label>Ngày cấp</label>
+              <input type="date" name="em-date-cmt">
+            </div>
+            <div class="item em-place-cmt item1">
+              <label>Nơi cấp</label>
+              <input type="text" name="em-place-cmt">
+            </div>
+            <div class="item space">
+            </div>
+            <div class="item em-email item1">
+              <label>Email (<span>*</span>)</label>
+              <input type="text" name="em-email">
+            </div>
+            <div class="item em-phone">
+              <label>Số điện thoại (<span>*</span>)</label>
+              <input type="text" name="em-phone">
+            </div>
+          </div>
+        </div>
+        <div class="job-information">
+          <div class="title-infor">B. THÔNG TIN CÔNG VIỆC:</div>
+          <div class="row-1"></div>
+          <div class="content-information">
+            <div class="item item1">
+              <label>Vị trí</label>
+              <div class="select-container" onmouseup="setEvent(3)">
+
+                <div class="select-box select-on-form">
+                  <div class="selected selected3 ">
+                    <div class="content-selected" id="content-selected3">Giám đốc</div>
+                    <div class="icon-select icon-form" id="selected-3"></div>
+                  </div>
+                  <div class="options-container options-container3 options-container-form">
+
+                    <div class="option option-selected option3">
+                      <input type="radio" class="radio" id="ceo" name="em-pos" />
+                      <label for="ceo">Giám đốc</label>
                     </div>
+                    <div class="option option3">
+                      <input type="radio" class="radio" id="employee1" name="em-pos" />
+                      <label for="employee1">Nhân viên</label>
+                    </div>
+
+                  </div>
                 </div>
+              </div>
+
             </div>
-            <div class="i-btn">
-                <div class="a-btn cancel" onclick="hiddenForm()">Hủy</div>
-                <input type="submit" class="a-btn btn-content" value="Lưu">
-                
+            <div class="item item1">
+              <label>Phòng ban</label>
+              <div class="select-container" onmouseup="setEvent(4)">
+
+                <div class="select-box select-on-form">
+                  <div class="selected selected4 ">
+                    <div class="content-selected" id="content-selected4">Phòng nhân sự</div>
+                    <div class="icon-select icon-form" id="selected-4"></div>
+                  </div>
+                  <div class="options-container options-container4 options-container-form">
+
+                    <div class="option option-selected option4">
+                      <input type="radio" class="radio" id="em-room-hr" name="em-room" />
+                      <label for="em-room-hr">Phòng nhân sự</label>
+                    </div>
+                    <div class="option option4">
+                      <input type="radio" class="radio" id="em-room-count" name="em-room" />
+                      <label for="em-room-count">Phòng kế toán</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
-        </form>
-        <div class="background-form" id="b-form"></div>
-    </body>
-    <script src="../../js/common/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="../../js/page/employee/select.js"></script>
-    <script type="text/javascript" src="../../js/page/employee/form.js"></script>
-    
+            <div class="item item1">
+              <label>Mã số thuế cá nhân</label>
+              <input type="text" name="em-tax-code">
+            </div>
+            <div class="item item1">
+              <label>Mức lương cơ bản</label>
+              <input type="text" name="em-basic-salary">
+            </div>
+            <div class="item item1">
+              <label>Ngày ra nhập công ty</label>
+              <input type="date" name="em-join">
+            </div>
+            <div class="item item1">
+              <label>Tình trạng công việc</label>
+              <div class="select-container" onmouseup="setEvent(5)">
+
+                <div class="select-box select-on-form">
+                  <div class="selected selected5 ">
+                    <div class="content-selected" id="content-selected5">Đang làm việc</div>
+                    <div class="icon-select icon-form" id="selected-5"></div>
+                  </div>
+                  <div class="options-container options-container5 options-container-form">
+
+                    <div class="option option-selected option5">
+                      <input type="radio" class="radio" id="em-working" name="em-status" />
+                      <label for="em-working">Đang làm việc</label>
+                    </div>
+                    <div class="option option5">
+                      <input type="radio" class="radio" id="em-retỉed" name="em-status" />
+                      <label for="em-retỉed">Đã nghỉ việc</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="i-btn">
+      <div class="a-btn cancel" onclick="hiddenForm()">Hủy</div>
+      <input type="submit" class="a-btn btn-content" value="Lưu">
+
+    </div>
+  </form>
+  <div class="background-form" id="b-form"></div>
+</body>
+<script src="../../js/common/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/page/employee/select.js"></script>
+<script type="text/javascript" src="../../js/page/employee/form.js"></script>
+
 </html>
