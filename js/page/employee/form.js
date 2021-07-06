@@ -6,14 +6,15 @@ document.getElementById("menu-4").classList.add("nav-content-focus");
 document.getElementById("p-1").classList.add("page-active");
 
 /** ---------------------------------
- * Hiển thị form thêm nhân viên
+ * Hiển thị form thêm nhân viên, focus vào mã nhân viên
  * Create by: TQHa (5/7/2021)
  */
 document.getElementById("addemployee").addEventListener('click', () => {
     document.getElementById("form-infor").style.display = "flex";
     document.getElementById("form-infor").style.flexDirection = "column";
     document.getElementById("b-form").style.display = "block";
-    document.getElementById("em-code").focus();
+    document.getElementById("input1").focus();
+
 });
 
 /** ------------------------------
@@ -77,3 +78,4 @@ function fileValidation(){
         }
     }
 }
+

@@ -40,7 +40,7 @@
     position: relative;
     
 }
-.content-bar input{
+/* .content-bar > input{
     height: 36px;
     width: 260px;
     border-radius: 4px;
@@ -52,7 +52,7 @@
     background-repeat: no-repeat;
     background-position: 16px center;
     padding-left: 40px;
-}
+} */
 .content-bar input::placeholder{
     font-size: 12px;
     font-family: GoogleSans-Regular;
@@ -205,4 +205,7 @@
 }
 .navigations .p{
     margin-left: 16px;
+}
+#amount-employee{
+    color: #000000;
 }

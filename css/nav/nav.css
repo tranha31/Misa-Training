@@ -15,10 +15,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.nav .nav-content:hover{
-    background-color: #e5e5e5;
     cursor: pointer;
+}
+.nav .nav-content:not(.nav-content-focus):hover{
+    background-color: #e5e5e5;
     color: #000000;
     font-family: GoogleSans-Regular;
 }

@@ -1,11 +1,15 @@
+/* Custom select */
 .select-container{
     position: relative;
 }
 .select-box{
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 220px;
     padding-left: 16px;
+}
+.selected-focus{
+    border-color: #019160 !important;
 }
 .selected{
     height: 40px;
@@ -21,25 +25,27 @@
     border-color: #019160;
 }
 .selected .content-selected{
-    width: 100%;
+    width: calc(100% - 71px); 
 }
+
 .icon-select{
-    width: 16px;
-    height: 16px;
+    width: 40px;
+    height: 40px;
     background-image: url(../../content/icons/arrow-down.png);
-    position: absolute;
-    left: 160px;
-    top: 12px;
     opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-left: 1px solid #bbbbbb;
 }
 .icon-selected{
     transform: rotateX(180deg);
+    background-color: #e9ebee;
 }
 .selected-list{
     transform: rotateX(180deg);
 }
 .select-box .options-container{
-    width: 170px;
+    width: 220px;
     background-color: #ffffff;
     max-height: 0;
     opacity: 0;
@@ -88,16 +94,29 @@
 }
 .select-container .select-box-header{
     padding-left: 0;
+    width: 206px;
+}
+.select-box-header .content-selected-header{
+    width: calc(100% - 50px);
+}
+.select-header .icon-select-header{
+    background-color: #ffffff !important;
+}
+.select-box .options-container-header{
+    width: 206px;
 }
 .select-box-header .select-header{
     border: none;
 }
 .selected .icon-select-header{
     left: 150px;
+    border: none;
 }
+
 .select-box .options-container-footer{
     top: -128px;
     right: 0.5px;
+    width: 170px;
 }
 .selected #selected-7{
     width: 16px;
@@ -109,4 +128,20 @@
     top: 12px;
     opacity: 0.6;
 
+}
+.select-box input{
+    border: none !important;
+    border-radius: 4px;
+    outline: none;
+    font-family: GoogleSans-Regular;
+}
+.select-box-footer{
+    width: 170px;
+}
+.content-selected-footer{
+    width: 100% !important;
+}
+.icon-select-footer{
+    border: none;
+    left: 160px !important;
 }
