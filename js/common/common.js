@@ -97,6 +97,9 @@ function formatSalary(salary){
     return salary;
 }
 
-document.getElementById("input0").addEventListener("Focus", () => {
-    console.log("0000");
+document.getElementById("input0").addEventListener("focus", () => {
+    document.getElementById("div-input0").classList.add("input-focus");
+});
+document.getElementById("input0").addEventListener("blur", () => {
+    document.getElementById("div-input0").classList.remove("input-focus");
 });

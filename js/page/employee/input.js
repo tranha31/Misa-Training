@@ -41,7 +41,7 @@ function deleteContent(i){
  * create by: TQHa (6/7/2021)
  */
  function focusInput1(i){
-     console.log("aaa");
+    console.log("aaa");
     var id = "div-input" + i;
     document.getElementById(id).classList.add("input-focus");
 }
