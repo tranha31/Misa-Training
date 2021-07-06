@@ -90,8 +90,7 @@
     </div>
     <div class="content-bar">
       <div class="input" id="div-input0">
-        <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" onkeyup="displayDeleteContent(0)" 
-        onkeydown="focusInput1(0)"/>
+        <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" onkeyup="displayDeleteContent(0)"/>
         <div class="delete-icon" id="delete-input0" onclick="deleteContent(0)"></div>
       </div>
 
@@ -100,7 +99,7 @@
         <div class="select-box">
           <div class="selected selected0" id="selected0">
             <input class="content-selected" id="content-selected0" placeholder="Chọn/Nhập phòng ban"
-              onkeyup="displayDeleteContentInput(0)" onkeydown="focusInput(0)">
+              onkeyup="displayDeleteContentInput(0)" >
             <div class="delete-icon" id="delete-icon0" onclick="deleleContentInput(0)"></div>
             <div class="icon-select" id="selected-0"></div>
           </div>
@@ -127,7 +126,7 @@
         <div class="select-box">
           <div class="selected selected1" id="selected1">
             <input class="content-selected" id="content-selected1" placeholder="Chọn/Nhập vị trí"
-              onkeyup="displayDeleteContentInput(1)" onkeydown="focusInput(1)">
+              onkeyup="displayDeleteContentInput(1)">
             <div class="delete-icon" id="delete-icon1" onclick="deleleContentInput(1)"></div>
             <div class="icon-select" id="selected-1"></div>
           </div>
@@ -218,7 +217,7 @@
     </div>
   </div>
 
-  <form id="form-infor" method="POST" action="" class="employee-information" enctype="multipart/form-data">
+  <div id="form-infor" class="employee-information">
     <div class="form-header">
       <div>THÔNG TIN NHÂN VIÊN</div>
       <div class="exist" onclick="hiddenForm()"></div>
@@ -239,7 +238,7 @@
               <label>Mã nhân viên (<span>*</span>)</label>
               <div class="input input-form" id="div-input1">
                 <input type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên" 
-                onkeyup="displayDeleteContent(1)" onkeydown="focusInput1(1)">
+                onkeyup="displayDeleteContent(1)">
                 <div class="delete-icon" id="delete-input1" onclick="deleteContent(1)"></div>
               </div>
               
@@ -248,14 +247,13 @@
               <label>Họ và tên (<span>*</span>)</label>
               <div class="input input-form" id="div-input2">
                 <input type="text" class="filter-bar" name="em-name" id="input2" 
-                placeholder="Nhập họ và tên nhân viên" onkeyup="displayDeleteContent(2)" 
-                onkeydown="focusInput1(2)">
+                placeholder="Nhập họ và tên nhân viên" onkeyup="displayDeleteContent(2)" >
                 <div class="delete-icon" id="delete-input2" onclick="deleteContent(2)"></div>
               </div>
             </div>
             <div class="item em-date item1">
               <label>Ngày sinh</label>
-              <input type="date" name="em-date">
+              <input type="date" name="em-date" id="em-date-birth">
             </div>
             <div class="item em-gen">
               <label>Giới tính</label>
@@ -264,7 +262,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected2 " id="selected2">
                     <input class="content-selected" id="content-selected2" placeholder="Lựa chọn giới tính"
-                      onkeyup="displayDeleteContentInput(2)" onkeydown="focusInput(2)" readonly>
+                      onkeyup="displayDeleteContentInput(2)" readonly>
                     <div class="delete-icon" id="delete-icon2" onclick="deleleContentInput(2)"></div>
                     <div class="icon-select icon-form" id="selected-2"></div>
                   </div>
@@ -291,21 +289,20 @@
               <label>Số CMTND/Căn cước (<span>*</span>)</label>
               <div class="input input-form" id="div-input3">
                 <input type="text" class="filter-bar" name="em-cmt" id="input3" 
-                placeholder="Nhập số CMTND/CCCD" onkeyup="displayDeleteContent(3)" 
-                onkeydown="focusInput1(3)">
+                placeholder="Nhập số CMTND/CCCD" onkeyup="displayDeleteContent(3)" >
                 <div class="delete-icon" id="delete-input3" onclick="deleteContent(3)"></div>
               </div>
             </div>
             <div class="item em-date-cmt">
               <label>Ngày cấp</label>
-              <input type="date" name="em-date-cmt">
+              <input type="date" name="em-date-cmt" id="em-date-cmt">
             </div>
             <div class="item em-place-cmt item1">
               <label>Nơi cấp</label>
               <div class="input input-form" id="div-input5">
                 <input type="text" class="filter-bar" name="em-place-cmt" id="input5" 
                 placeholder="Nhập nơi cấp CMTND/CCCD" onkeyup="displayDeleteContent(5)" 
-                onkeydown="focusInput1(5)">
+                >
                 <div class="delete-icon" id="delete-input5" onclick="deleteContent(5)"></div>
               </div>
             </div>
@@ -316,7 +313,7 @@
               <div class="input input-form" id="div-input6">
                 <input type="text" class="filter-bar" name="em-mail" id="input6" 
                 placeholder="Nhập địa chỉ email" onkeyup="displayDeleteContent(6)" 
-                onkeydown="focusInput1(6)">
+                >
                 <div class="delete-icon" id="delete-input6" onclick="deleteContent(6)"></div>
               </div>
             </div>
@@ -325,7 +322,7 @@
               <div class="input input-form" id="div-input7">
                 <input type="text" class="filter-bar" name="em-phone" id="input7" 
                 placeholder="Nhập số điện thoại" onkeyup="displayDeleteContent(7)" 
-                onkeydown="focusInput1(7)">
+                >
                 <div class="delete-icon" id="delete-input7" onclick="deleteContent(7)"></div>
               </div>
             </div>
@@ -342,7 +339,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected3 " id="selected3">
                     <input class="content-selected" id="content-selected3" placeholder="Chọn/Nhập vị trí"
-                      onkeyup="displayDeleteContentInput(3)" onkeydown="focusInput(3)">
+                      onkeyup="displayDeleteContentInput(3)" >
                     <div class="delete-icon" id="delete-icon3" onclick="deleleContentInput(3)"></div>
                     <div class="icon-select icon-form" id="selected-3"></div>
                   </div>
@@ -369,7 +366,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected4 " id="selected4">
                     <input class="content-selected" id="content-selected4" placeholder="Chọn/Nhập phòng ban"
-                      onkeyup="displayDeleteContentInput(4)" onkeydown="focusInput(4)">
+                      onkeyup="displayDeleteContentInput(4)" >
                     <div class="delete-icon" id="delete-icon4" onclick="deleleContentInput(4)"></div>
                     <div class="icon-select icon-form" id="selected-4"></div>
                   </div>
@@ -393,7 +390,7 @@
               <div class="input input-form" id="div-input8">
                 <input type="text" class="filter-bar" name="em-tax-code" id="input8" 
                 placeholder="Nhập mã số thuế cá nhân" onkeyup="displayDeleteContent(8)" 
-                onkeydown="focusInput1(8)">
+                >
                 <div class="delete-icon" id="delete-input8" onclick="deleteContent(8)"></div>
               </div>
             </div>
@@ -402,13 +399,13 @@
               <div class="input input-form" id="div-input9">
                 <input type="text" class="filter-bar" name="em-basic-salary" id="input9" 
                 placeholder="(VNĐ)" onkeyup="displayDeleteContent(9)" 
-                onkeydown="focusInput1(9)">
+                >
                 <div class="delete-icon" id="delete-input9" onclick="deleteContent(9)"></div>
               </div>
             </div>
             <div class="item item1">
               <label>Ngày ra nhập công ty</label>
-              <input type="date" name="em-join">
+              <input type="date" name="em-join" id="em-join">
             </div>
             <div class="item item1">
               <label>Tình trạng công việc</label>
@@ -417,7 +414,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected5" id="selected5">
                     <input class="content-selected" id="content-selected5" placeholder="Chọn/Nhập tình trạng công việc"
-                      onkeyup="displayDeleteContentInput(5)" onkeydown="focusInput(5)">
+                      onkeyup="displayDeleteContentInput(5)">
                     <div class="delete-icon" id="delete-icon5" onclick="deleleContentInput(5)"></div>
                     <div class="icon-select icon-form" id="selected-5"></div>
                   </div>
@@ -443,15 +440,16 @@
     </div>
     <div class="i-btn">
       <div class="a-btn cancel" onclick="hiddenForm()">Hủy</div>
-      <input type="submit" class="a-btn btn-content" value="Lưu">
+      <input type="button" class="a-btn btn-content" value="Lưu" onclick="postValue()">
 
     </div>
-  </form>
+  </div>
   <div class="background-form" id="b-form"></div>
 </body>
 <script src="../../js/common/jquery-3.6.0.min.js"></script>
 <script src="../../js/common/common.js"></script>
 <script src="../../js/common/table.js"></script>
+<script src="../../js/common/eventform.js"></script>
 <script src="../../js/page/employee/input.js"></script>
 <script type="text/javascript" src="../../js/page/employee/select.js"></script>
 <script type="text/javascript" src="../../js/page/employee/form.js"></script>

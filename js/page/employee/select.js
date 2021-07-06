@@ -65,8 +65,6 @@ window.addEventListener('mouseup', function(e){
  * Create by: TQHa (6/7/2021)
  */
 function displayDeleteContentInput(i){
-    var id = "selected" + i;
-    document.getElementById(id).classList.remove("selected-focus");
     if(0<=i && i<=5){
         let x = "#content-selected" + i;
         let y = "delete-icon" + i;
@@ -102,14 +100,4 @@ function deleleContentInput(i){
     $(x).val("");
     let y = "delete-icon" + i;
     document.getElementById(y).style.visibility = "hidden";
-}
-
-/**--------------------------------------
- * Bỏ focus input khi không nhập kí tự
- * @param {Number} i số hiệu id
- * create by: TQHa (6/7/2021)
- */
-function focusInput(i){
-    var id = "selected" + i;
-    document.getElementById(id).classList.add("selected-focus");
 }

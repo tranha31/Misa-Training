@@ -97,9 +97,93 @@ function formatSalary(salary){
     return salary;
 }
 
+/**
+ * Tạo sự kiện focus cho thẻ input
+ * create by: TQHa (6/7/2021)
+ */
 document.getElementById("input0").addEventListener("focus", () => {
     document.getElementById("div-input0").classList.add("input-focus");
 });
 document.getElementById("input0").addEventListener("blur", () => {
     document.getElementById("div-input0").classList.remove("input-focus");
+});
+document.getElementById("input1").addEventListener("focus", () => {
+    document.getElementById("div-input1").classList.add("input-focus");
+});
+document.getElementById("input1").addEventListener("blur", () => {
+    document.getElementById("div-input1").classList.remove("input-focus");
+});
+document.getElementById("input2").addEventListener("focus", () => {
+    document.getElementById("div-input2").classList.add("input-focus");
+});
+document.getElementById("input2").addEventListener("blur", () => {
+    document.getElementById("div-input2").classList.remove("input-focus");
+});
+document.getElementById("input3").addEventListener("focus", () => {
+    document.getElementById("div-input3").classList.add("input-focus");
+});
+document.getElementById("input3").addEventListener("blur", () => {
+    document.getElementById("div-input3").classList.remove("input-focus");
+});
+document.getElementById("input5").addEventListener("focus", () => {
+    document.getElementById("div-input5").classList.add("input-focus");
+});
+document.getElementById("input5").addEventListener("blur", () => {
+    document.getElementById("div-input5").classList.remove("input-focus");
+});
+document.getElementById("input6").addEventListener("focus", () => {
+    document.getElementById("div-input6").classList.add("input-focus");
+});
+document.getElementById("input6").addEventListener("blur", () => {
+    document.getElementById("div-input6").classList.remove("input-focus");
+});
+document.getElementById("input7").addEventListener("focus", () => {
+    document.getElementById("div-input7").classList.add("input-focus");
+});
+document.getElementById("input7").addEventListener("blur", () => {
+    document.getElementById("div-input7").classList.remove("input-focus");
+});
+document.getElementById("input8").addEventListener("focus", () => {
+    document.getElementById("div-input8").classList.add("input-focus");
+});
+document.getElementById("input8").addEventListener("blur", () => {
+    document.getElementById("div-input8").classList.remove("input-focus");
+});
+document.getElementById("input9").addEventListener("focus", () => {
+    document.getElementById("div-input9").classList.add("input-focus");
+});
+document.getElementById("input9").addEventListener("blur", () => {
+    document.getElementById("div-input9").classList.remove("input-focus");
+});
+
+
+document.getElementById("content-selected0").addEventListener("focus", () => {
+    document.getElementById("selected0").classList.add("input-focus");
+});
+document.getElementById("content-selected0").addEventListener("blur", () => {
+    document.getElementById("selected0").classList.remove("input-focus");
+});
+document.getElementById("content-selected1").addEventListener("focus", () => {
+    document.getElementById("selected1").classList.add("input-focus");
+});
+document.getElementById("content-selected1").addEventListener("blur", () => {
+    document.getElementById("selected1").classList.remove("input-focus");
+});
+document.getElementById("content-selected3").addEventListener("focus", () => {
+    document.getElementById("selected3").classList.add("input-focus");
+});
+document.getElementById("content-selected3").addEventListener("blur", () => {
+    document.getElementById("selected3").classList.remove("input-focus");
+});
+document.getElementById("content-selected4").addEventListener("focus", () => {
+    document.getElementById("selected4").classList.add("input-focus");
+});
+document.getElementById("content-selected4").addEventListener("blur", () => {
+    document.getElementById("selected4").classList.remove("input-focus");
+});
+document.getElementById("content-selected5").addEventListener("focus", () => {
+    document.getElementById("selected5").classList.add("input-focus");
+});
+document.getElementById("content-selected5").addEventListener("blur", () => {
+    document.getElementById("selected5").classList.remove("input-focus");
 });
