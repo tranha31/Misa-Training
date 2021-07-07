@@ -18,7 +18,6 @@ function displayDeleteContent(i) {
     $(x).keyup(function () {
         var key = event.keyCode || event.charCode;
         if (key == 9) {
-            alert("aa");
             document.getElementById(y).style.visibility = "hidden";
         }
         if (key == 8) {
@@ -38,6 +37,7 @@ function deleteContent(i) {
     $(x).val("");
     let y = "delete-input" + i;
     document.getElementById(y).style.visibility = "hidden";
+    notificationNull(i)
 }
 
 

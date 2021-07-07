@@ -21,7 +21,13 @@ function setEvent(i){
         element.addEventListener("click", () =>{
             var y = "content-selected" + i;
             var c = element.querySelector("label").innerHTML;
-            document.getElementById(y).value = c;
+            if(i == 7){
+                document.getElementById(y).innerHTML = c;
+            }
+            else{
+                document.getElementById(y).value = c;
+            }
+            
             optionsList.forEach(o => {
                 //console.log(o);
                 o.classList.remove("option-selected");

@@ -90,7 +90,8 @@
     </div>
     <div class="content-bar">
       <div class="input" id="div-input0">
-        <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" onkeyup="displayDeleteContent(0)"/>
+        <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"
+          onkeyup="displayDeleteContent(0)" />
         <div class="delete-icon" id="delete-input0" onclick="deleteContent(0)"></div>
       </div>
 
@@ -99,7 +100,7 @@
         <div class="select-box">
           <div class="selected selected0" id="selected0">
             <input class="content-selected" id="content-selected0" placeholder="Chọn/Nhập phòng ban"
-              onkeyup="displayDeleteContentInput(0)" >
+              onkeyup="displayDeleteContentInput(0)">
             <div class="delete-icon" id="delete-icon0" onclick="deleleContentInput(0)"></div>
             <div class="icon-select" id="selected-0"></div>
           </div>
@@ -237,24 +238,33 @@
             <div class="item em-code item1">
               <label>Mã nhân viên (<span>*</span>)</label>
               <div class="input input-form" id="div-input1">
-                <input type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên" 
-                onkeyup="displayDeleteContent(1)">
+                <input type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên"
+                  onkeyup="displayDeleteContent(1)">
                 <div class="delete-icon" id="delete-input1" onclick="deleteContent(1)"></div>
+                <div class="error" id="error-em-code1"></div>
+                <div class="trigle" id="trigle-em-code1"></div>
               </div>
-              
+
             </div>
             <div class="item em-name">
               <label>Họ và tên (<span>*</span>)</label>
               <div class="input input-form" id="div-input2">
-                <input type="text" class="filter-bar" name="em-name" id="input2" 
-                placeholder="Nhập họ và tên nhân viên" onkeyup="displayDeleteContent(2)" >
+                <input type="text" class="filter-bar" name="em-name" id="input2" placeholder="Nhập họ và tên nhân viên"
+                  onkeyup="displayDeleteContent(2)">
                 <div class="delete-icon" id="delete-input2" onclick="deleteContent(2)"></div>
+                <div class="error" id="error-em-code2"></div>
+                <div class="trigle" id="trigle-em-code2"></div>
               </div>
+
             </div>
-            <div class="item em-date item1">
+            <div class="item em-date item1" id="div-input10" style="position: relative;">
               <label>Ngày sinh</label>
               <input type="date" name="em-date" id="em-date-birth">
+              <div class="error error-date" id="error-em-code10"></div>
+              <div class="trigle trigle-date" id="trigle-em-code10"></div>
             </div>
+            <!-- <div class="error" id="error-em-code1"></div>
+              <div class="trigle" id="trigle-em-code1"></div> -->
             <div class="item em-gen">
               <label>Giới tính</label>
               <div class="select-container" onmouseup="setEvent(2)">
@@ -288,10 +298,13 @@
             <div class="item em-cmt item1">
               <label>Số CMTND/Căn cước (<span>*</span>)</label>
               <div class="input input-form" id="div-input3">
-                <input type="text" class="filter-bar" name="em-cmt" id="input3" 
-                placeholder="Nhập số CMTND/CCCD" onkeyup="displayDeleteContent(3)" >
+                <input type="text" class="filter-bar" name="em-cmt" id="input3" placeholder="Nhập số CMTND/CCCD"
+                  onkeyup="displayDeleteContent(3)">
                 <div class="delete-icon" id="delete-input3" onclick="deleteContent(3)"></div>
+                <div class="error" id="error-em-code3"></div>
+                <div class="trigle" id="trigle-em-code3"></div>
               </div>
+
             </div>
             <div class="item em-date-cmt">
               <label>Ngày cấp</label>
@@ -300,9 +313,8 @@
             <div class="item em-place-cmt item1">
               <label>Nơi cấp</label>
               <div class="input input-form" id="div-input5">
-                <input type="text" class="filter-bar" name="em-place-cmt" id="input5" 
-                placeholder="Nhập nơi cấp CMTND/CCCD" onkeyup="displayDeleteContent(5)" 
-                >
+                <input type="text" class="filter-bar" name="em-place-cmt" id="input5"
+                  placeholder="Nhập nơi cấp CMTND/CCCD" onkeyup="displayDeleteContent(5)">
                 <div class="delete-icon" id="delete-input5" onclick="deleteContent(5)"></div>
               </div>
             </div>
@@ -311,20 +323,24 @@
             <div class="item em-email item1">
               <label>Email (<span>*</span>)</label>
               <div class="input input-form" id="div-input6">
-                <input type="text" class="filter-bar" name="em-mail" id="input6" 
-                placeholder="Nhập địa chỉ email" onkeyup="displayDeleteContent(6)" 
-                >
+                <input type="text" class="filter-bar" name="em-mail" id="input6" placeholder="Nhập địa chỉ email"
+                  onkeyup="displayDeleteContent(6)">
                 <div class="delete-icon" id="delete-input6" onclick="deleteContent(6)"></div>
+                <div class="error" id="error-em-code6"></div>
+                <div class="trigle" id="trigle-em-code6"></div>
               </div>
+
             </div>
             <div class="item em-phone">
               <label>Số điện thoại (<span>*</span>)</label>
               <div class="input input-form" id="div-input7">
-                <input type="text" class="filter-bar" name="em-phone" id="input7" 
-                placeholder="Nhập số điện thoại" onkeyup="displayDeleteContent(7)" 
-                >
+                <input type="text" class="filter-bar" name="em-phone" id="input7" placeholder="Nhập số điện thoại"
+                  onkeyup="displayDeleteContent(7)">
                 <div class="delete-icon" id="delete-input7" onclick="deleteContent(7)"></div>
+                <div class="error" id="error-em-code7"></div>
+                <div class="trigle" id="trigle-em-code7"></div>
               </div>
+
             </div>
           </div>
         </div>
@@ -339,7 +355,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected3 " id="selected3">
                     <input class="content-selected" id="content-selected3" placeholder="Chọn/Nhập vị trí"
-                      onkeyup="displayDeleteContentInput(3)" >
+                      onkeyup="displayDeleteContentInput(3)">
                     <div class="delete-icon" id="delete-icon3" onclick="deleleContentInput(3)"></div>
                     <div class="icon-select icon-form" id="selected-3"></div>
                   </div>
@@ -366,7 +382,7 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected4 " id="selected4">
                     <input class="content-selected" id="content-selected4" placeholder="Chọn/Nhập phòng ban"
-                      onkeyup="displayDeleteContentInput(4)" >
+                      onkeyup="displayDeleteContentInput(4)">
                     <div class="delete-icon" id="delete-icon4" onclick="deleleContentInput(4)"></div>
                     <div class="icon-select icon-form" id="selected-4"></div>
                   </div>
@@ -388,19 +404,23 @@
             <div class="item item1">
               <label>Mã số thuế cá nhân</label>
               <div class="input input-form" id="div-input8">
-                <input type="text" class="filter-bar" name="em-tax-code" id="input8" 
-                placeholder="Nhập mã số thuế cá nhân" onkeyup="displayDeleteContent(8)" 
-                >
+                <input type="text" class="filter-bar" name="em-tax-code" id="input8"
+                  placeholder="Nhập mã số thuế cá nhân" onkeyup="displayDeleteContent(8)">
                 <div class="delete-icon" id="delete-input8" onclick="deleteContent(8)"></div>
+                <div class="error" id="error-em-code8"></div>
+                <div class="trigle" id="trigle-em-code8"></div>
               </div>
+
             </div>
             <div class="item item1">
               <label>Mức lương cơ bản</label>
               <div class="input input-form" id="div-input9">
-                <input type="text" class="filter-bar" name="em-basic-salary" id="input9" 
-                placeholder="(VNĐ)" onkeyup="displayDeleteContent(9)" 
-                >
+                <input type="text" class="filter-bar" name="em-basic-salary" id="input9" placeholder="(VNĐ)"
+                  onkeyup="displayDeleteContent(9)">
+
                 <div class="delete-icon" id="delete-input9" onclick="deleteContent(9)"></div>
+                <div class="error" id="error-em-code9"></div>
+                <div class="trigle" id="trigle-em-code9"></div>
               </div>
             </div>
             <div class="item item1">
