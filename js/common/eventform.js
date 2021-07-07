@@ -31,7 +31,7 @@ function postValue() {
         result = false;
     }
     else {
-        if (!checkFullName(employeeName)) {
+        if (checkFullName(employeeName)) {
             notificationInputAfterSubmit(2, "Tên không hợp lệ");
             result = false;
         }
@@ -87,8 +87,47 @@ function postValue() {
     }
 
     //Nếu thỏa mãn hết điều kiện thì gửi 
-    if(result){
-        
+    if (result) {
+        var gender;
+        if (employeeGender == "Nam") {
+            gender = 1;
+        }
+        else if (employeeGender == "Nữ") {
+            gender = 0;
+        }
+        else {
+            gender = 2;
+        }
+        employeeSalary = employeeSalary.split('.').join("");
+        let d = {
+            EmployeeCode: employeeCode,
+            FullName : employeeName,
+            Gender : gender,
+            DateOfBirth : employeeDOB,
+            PhoneNumber : employeePhoneNumber,
+            Email: employeeEmail,
+            IdentityNumber : employeeIdential,
+            IdentityDate : dateGetIndential,
+            IdentityPlace : placeGetIndential,
+            JoinDate: employeeDateJoin,
+            PersonalTaxCode : employeeTaxCode,
+            Salary: employeeSalary,
+            PositionName : employeePosition,
+            DepartmentName: employeeDepartment,
+        };
+        d = JSON.stringify(d);
+        $.ajax({
+            method: "POST",
+            url: "http://cukcuk.manhnv.net/v1/Employees",
+            dataType: "application/json",
+            data: d,
+            contentType: "application/json-patch+json",
+
+        }).done(function (res) {
+            alert("OK");
+        }).fail(function (xhr, textStatus, errorThrown) {
+            alert("Fail");
+        })
     }
 }
 /**
@@ -130,15 +169,8 @@ function checkPhoneNumber(phone) {
  * create by : TQHa (7/7/2021)
  */
 function checkFullName(name) {
-    var letters = /^[A-Za-z       ]+$/;
-
-    if (name.match(letters)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-
+    const regex = /\d/;
+    return regex.test(name);
 }
 
 /**
@@ -283,7 +315,7 @@ function notificationInput(i, content) {
             document.getElementById(idDiv).classList.remove("input-error");
         });
 
-        if (i != 8 || i != 9) {
+        if (i != 8 && i != 9) {
             document.getElementById(id).addEventListener("blur", () => {
                 if (document.getElementById(id).value == "") {
                     document.getElementById(idError).style.display = "flex";
@@ -335,13 +367,13 @@ function notificationInputAfterSubmit(i, content) {
         document.getElementById(idTrigle).style.display = "flex";
         document.getElementById("em-date-birth").classList.add("input-error");
     }
-    else{
+    else {
         document.getElementById(idError).style.display = "flex";
         document.getElementById(idError).innerHTML = content;
         document.getElementById(idTrigle).style.display = "flex";
         document.getElementById(idDiv).classList.add("input-error");
     }
-    
+
 }
 
 /**

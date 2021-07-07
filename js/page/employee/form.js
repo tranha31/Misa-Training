@@ -13,6 +13,14 @@ document.getElementById("addemployee").addEventListener('click', () => {
     document.getElementById("form-infor").style.display = "flex";
     document.getElementById("form-infor").style.flexDirection = "column";
     document.getElementById("b-form").style.display = "block";
+    $.ajax({
+        method : "GET",
+        url : "http://cukcuk.manhnv.net/v1/Employees/NewEmployeeCode"
+    }).done(function(res){
+        document.getElementById("input1").value = res
+    }).fail(function(res){
+        alert("Fail");
+    })
     document.getElementById("input1").focus();
 
 });

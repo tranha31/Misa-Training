@@ -16,6 +16,7 @@ function loadData() {
         var data = res;
 
         $.each(data, function (index, item){
+            employeeId = item["EmployeeId"];
             employeeCode = checkInvalid(item["EmployeeCode"]);
             fullName = checkInvalid(item["FullName"]);
             genderName = checkInvalid(item["GenderName"]);
@@ -28,7 +29,7 @@ function loadData() {
             salary = checkInvalid(item["Salary"]);
             salary = formatSalary(salary);
             workStatusName = checkInvalid(item["WorkStatusName"]);
-            var tr = `<tr>
+            var tr = `<tr name="`+employeeId+`">
                         <td class="code">`+ employeeCode + `</td>
                         <td>`+ fullName + `</td>
                         <td>`+ genderName + `</td>
@@ -56,7 +57,7 @@ function loadData() {
  */
 function checkInvalid(item){
     if(!item){
-        item = ""
+        item = "";
     }
     return item;
 }

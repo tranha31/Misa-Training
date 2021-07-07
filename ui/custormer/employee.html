@@ -239,7 +239,7 @@
               <label>Mã nhân viên (<span>*</span>)</label>
               <div class="input input-form" id="div-input1">
                 <input type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên"
-                  onkeyup="displayDeleteContent(1)">
+                  onkeyup="displayDeleteContent(1)" readonly>
                 <div class="delete-icon" id="delete-input1" onclick="deleteContent(1)"></div>
                 <div class="error" id="error-em-code1"></div>
                 <div class="trigle" id="trigle-em-code1"></div>
@@ -319,6 +319,7 @@
               </div>
             </div>
             <div class="item space">
+              <input type="text" id="employee-id" hidden>
             </div>
             <div class="item em-email item1">
               <label>Email (<span>*</span>)</label>

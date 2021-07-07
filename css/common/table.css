@@ -24,7 +24,7 @@ input[type="checkbox"]:checked{
 }
 /* Custom table */
 .list-employee{
-    width: 100%;
+    width: 2000px;
     height: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -67,7 +67,7 @@ tbody > tr:nth-child(odd){
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 300px;
-    width: 200px;
+    width: 300px;
     padding-right: 10px;
 }
 .salary{

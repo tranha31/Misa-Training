@@ -18,8 +18,9 @@ body{
     src: url(../../content/fonts/GoogleSans-Italic.otf);
 }
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
     background-color: #F5F5F5;
+    height: 8px;
 } 
 
 ::-webkit-scrollbar-thumb {
