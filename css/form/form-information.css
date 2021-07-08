@@ -200,9 +200,11 @@
     color: #000000;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 60px;
 }
 .cancel:hover{
-    background-color: transparent;
+    background-color: #bbbbbb;
 }
 .form-active{
     display: flex;

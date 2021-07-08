@@ -102,6 +102,28 @@
     background-color: #01b075;
     border: none;
 }
+.content-bar .delete-btn{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 62px;
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+    background-image: url(../../content/icons/trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.content-bar .delete-btn:hover{
+    background-color: #e9ebee;
+    border: none;
+    cursor: pointer;
+}
+.content-bar .delete-btn:active{
+    background-color: #01b075;
+    border: none;
+}
 .content .grid{
     height: calc(100vh - 219px);
     min-height: 400px;
@@ -162,36 +184,32 @@
     margin-right: 8px;
 }
 .navigations .next{
-    background-image: url(../../content/icons/next.png);
+    background-image: url(../../content/icons/btn-next-page.svg);
     background-repeat: no-repeat;
-    background-size:15px;
+    
     background-position: center;
-    opacity: 0.8;
+   
     margin-left: 16px;
 }
 .navigations .last{
-    background-image: url(../../content/icons/right-arrow.png);
+    background-image: url(../../content/icons/btn-lastpage.svg);
     background-repeat: no-repeat;
-    background-size:15px;
+   
     background-position: center;
-    opacity: 0.8;
+    
 }
 .navigations .pre{
-    background-image: url(../../content/icons/next.png);
+    background-image: url(../../content/icons/btn-prev-page.svg);
     background-repeat: no-repeat;
-    background-size:15px;
+   
     background-position: center;
-    opacity: 0.8;
-    transform: rotate(180deg);
     margin-right: 16px;
 }
 .navigations .first{
-    background-image: url(../../content/icons/right-arrow.png);
+    background-image: url(../../content/icons/btn-firstpage.svg);
     background-repeat: no-repeat;
-    background-size:15px;
+    
     background-position: center;
-    opacity: 0.8;
-    transform: rotate(180deg);
 }
 .navigations .page{
     height: 30px;

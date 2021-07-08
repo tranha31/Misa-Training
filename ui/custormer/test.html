@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../../css/common/common.css" rel="stylesheet">
+    <link href="../../css/common/popup.css" rel="stylesheet">
+    <link href="../../css/common/toast.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pop-up">
+        <div class="pop-up-title" id="pop-ip-title"></div>
+        <div class="pop-up-content">
+            <div class="icon-warning" id="icon-warning"></div>
+            <div class="content-warning"><span></span></div>
+
+        </div>
+        <div class="pop-up-btn">
+            <div class="cancel" id="cancel"></div>
+            <div class="submit" id="submit"></div>
+        </div>
+        <div class="close-pop-up"></div>
+    </div>
+    <div id="toast"></div>
+    <!-- Success -->
+    <button onclick="showSuccessToast()">Success</button>
+    <button onclick="showErrorToast()">Error</button>
+    
+    <script>
+        function toast({ title = '', type = 'info', duration = 3000 }) {
+            const main = document.getElementById("toast");
+            if (main) {
+                const toast = document.createElement("div");
+                //auto remove toast
+                const autoRemove = setTimeout(function(){
+                    main.removeChild(toast);
+                }, duration+1000);
+
+                toast.onclick = function(e){
+                    if(e.target.closest('.delete-toast')){
+                        main.removeChild(toast);
+                        clearTimeout(autoRemove);
+                    }
+                }
+                const delay = (duration / 1000).toFixed(2);
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    info: 'fas fa-info-circle',
+                    warning: 'fas fa-exclamation-circle',
+                    error: 'fas fa-exclamation-triangle',
+                    
+                }
+                toast.classList.add("toast-message");
+                toast.style.animation = `slideInLeft ease .5s, fadeOut linear 1s ${delay}s forwards`;
+                toast.innerHTML = `
+                    <div class="icon-toast toast-${type}" id="icon-toast">
+                        <i class="${icons[type]}"></i>
+                    </div>
+                    <div class="content-toast" id="content-toast">${title}</div>
+                    <div class="delete-toast" id="delete-toast">
+                        <i class="fas fa-times"></i>
+                    </div>`;
+                main.appendChild(toast);
+                
+            }
+        }
+        
+        function showSuccessToast(){
+            toast({
+                title: 'Thành công',
+                type: 'success',
+                duration: 3000
+            });
+        }
+        function showErrorToast(){
+            toast({
+                title: 'Thất bại',
+                type: 'error',
+                duration: 3000
+            });
+        }
+    </script>
+</body>
+
+</html>

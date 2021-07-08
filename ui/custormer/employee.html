@@ -6,7 +6,12 @@
   <meta charset="uft-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Misa Cukcuk</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="../../css/common/common.css" rel="stylesheet" />
+  <link href="../../css/common/popup.css" rel="stylesheet">
+  <link href="../../css/common/toast.css" rel="stylesheet">
   <link href="../../css/common/button.css" rel="stylesheet" />
   <link href="../../css/common/table.css" rel="stylesheet" />
   <link href="../../css/common/select.css" rel="stylesheet" />
@@ -17,7 +22,7 @@
 </head>
 
 <body>
-  <div class="header">
+   <div class="header">
     <div class="header-top" id="header-top">
       <div id="menu" class="header-top-img" onclick="resizeMenu()"></div>
       <div class="header-top-logo"></div>
@@ -104,20 +109,9 @@
             <div class="delete-icon" id="delete-icon0" onclick="deleleContentInput(0)"></div>
             <div class="icon-select" id="selected-0"></div>
           </div>
-          <div class="options-container options-container0">
+          <div class="options-container options-container0" id="options-container0">
 
-            <div class="option option-selected option0">
-              <input type="radio" class="radio" id="all-room" name="category" />
-              <label for="all-room">Tất cả phòng ban</label>
-            </div>
-            <div class="option option0">
-              <input type="radio" class="radio" id="hr-room" name="category" />
-              <label for="hr-room">Phòng nhân sự</label>
-            </div>
-            <div class="option option0">
-              <input type="radio" class="radio" id="account-room" name="category" />
-              <label for="account-room">Phòng kế toán</label>
-            </div>
+            
 
           </div>
         </div>
@@ -149,7 +143,8 @@
           </div>
         </div>
       </div>
-      <button class="second-btn"></button>
+      <div class="second-btn" onclick="refesh()"></div>
+      <div class="delete-btn" id="delete-btn" index="" onclick="deleteWarning()"></div>
     </div>
     <div class="grid">
       <table class="list-employee">
@@ -176,7 +171,7 @@
 
     <div class="page-navigation">
       <div class="total-employees">
-        Hiển thị 1-25/<span id="amount-employee"></span> nhân viên
+        Hiển thị 1-10/<span id="amount-employee"></span> nhân viên
       </div>
       <div class="navigations">
         <div class="move first"></div>
@@ -193,22 +188,22 @@
 
           <div class="select-box select-box-footer">
             <div class="selected selected7">
-              <div class="content-selected content-selected-footer" id="content-selected7">25 nhân viên/trang</div>
+              <div class="content-selected content-selected-footer" id="content-selected7">10 nhân viên/trang</div>
               <div class="icon-select icon-select-footer" id="selected-7"></div>
             </div>
             <div class="options-container options-container7 options-container-footer">
 
               <div class="option option-selected option7">
                 <input type="radio" class="radio" id="amount-15emp" name="amount" />
-                <label for="amount-15emp">15 nhân viên/trang</label>
+                <label for="amount-15emp">10 nhân viên/trang</label>
               </div>
               <div class="option option7">
                 <input type="radio" class="radio" id="amount-20emp" name="amount" />
-                <label for="amount-20emp">20 nhân viên/trang</label>
+                <label for="amount-20emp">15 nhân viên/trang</label>
               </div>
               <div class="option option7">
                 <input type="radio" class="radio" id="amount-25emp" name="amount" />
-                <label for="amount-25emp">25 nhân viên/trang</label>
+                <label for="amount-25emp">20 nhân viên/trang</label>
               </div>
 
             </div>
@@ -218,10 +213,10 @@
     </div>
   </div>
 
-  <div id="form-infor" class="employee-information">
+  <div id="form-infor" class="employee-information" status="0">
     <div class="form-header">
       <div>THÔNG TIN NHÂN VIÊN</div>
-      <div class="exist" onclick="hiddenForm()"></div>
+      <div class="exist" onclick="warningCloseForm()"></div>
     </div>
     <div class="form-content">
       <div class="avatar">
@@ -460,19 +455,39 @@
       </div>
     </div>
     <div class="i-btn">
-      <div class="a-btn cancel" onclick="hiddenForm()">Hủy</div>
+      <div class="a-btn cancel" onclick="warningCloseForm()">Hủy</div>
       <input type="button" class="a-btn btn-content" value="Lưu" onclick="postValue()">
 
     </div>
   </div>
+  
   <div class="background-form" id="b-form"></div>
+  
+  <div class="pop-up" id="pop-up">
+    <div class="pop-up-title" id="pop-up-title"></div>
+    <div class="pop-up-content">
+      <div class="icon-warning" id="icon-warning"></div>
+      <div class="content-warning" id="content-warning"></div>
+
+    </div>
+    <div class="pop-up-btn">
+      <div class="cancel" id="cancel"></div>
+      <div class="submit" id="submit"></div>
+    </div>
+    <div class="close-pop-up" id="close-pop-up"></div>
+  </div>
+  <div id="toast"></div>
 </body>
 <script src="../../js/common/jquery-3.6.0.min.js"></script>
+<script src="../../js/common/toast.js"></script>
 <script src="../../js/common/common.js"></script>
+<script src="../../js/common/popup.js"></script>
+
+
 <script src="../../js/common/table.js"></script>
 <script src="../../js/common/eventform.js"></script>
+
 <script src="../../js/page/employee/input.js"></script>
 <script type="text/javascript" src="../../js/page/employee/select.js"></script>
 <script type="text/javascript" src="../../js/page/employee/form.js"></script>
-
 </html>

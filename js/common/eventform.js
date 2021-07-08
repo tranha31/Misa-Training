@@ -18,6 +18,7 @@ function postValue() {
     var employeeSalary = document.getElementById("input9").value;
     var employeeDateJoin = document.getElementById("em-join").value;
     var employeeWorkStatus = document.getElementById("content-selected5").value;
+    var employeeID = document.getElementById("employee-id").value;
 
     var result = true;
     //Kiểm tra các điều kiện
@@ -101,33 +102,84 @@ function postValue() {
         employeeSalary = employeeSalary.split('.').join("");
         let d = {
             EmployeeCode: employeeCode,
-            FullName : employeeName,
-            Gender : gender,
-            DateOfBirth : employeeDOB,
-            PhoneNumber : employeePhoneNumber,
+            FullName: employeeName,
+            Gender: gender,
+            DateOfBirth: employeeDOB,
+            PhoneNumber: employeePhoneNumber,
             Email: employeeEmail,
-            IdentityNumber : employeeIdential,
-            IdentityDate : dateGetIndential,
-            IdentityPlace : placeGetIndential,
+            IdentityNumber: employeeIdential,
+            IdentityDate: dateGetIndential,
+            IdentityPlace: placeGetIndential,
             JoinDate: employeeDateJoin,
-            PersonalTaxCode : employeeTaxCode,
+            PersonalTaxCode: employeeTaxCode,
             Salary: employeeSalary,
-            PositionName : employeePosition,
+            PositionName: employeePosition,
             DepartmentName: employeeDepartment,
         };
         d = JSON.stringify(d);
-        $.ajax({
-            method: "POST",
-            url: "http://cukcuk.manhnv.net/v1/Employees",
-            dataType: "application/json",
-            data: d,
-            contentType: "application/json-patch+json",
+        s = $("#form-infor").attr("status");
+        if (s == 0) {
+            $.ajax({
+                method: "POST",
+                url: "http://cukcuk.manhnv.net/v1/Employees",
+                dataType: "json",
+                data: d,
+                contentType: "application/json-patch+json",
 
-        }).done(function (res) {
-            alert("OK");
-        }).fail(function (xhr, textStatus, errorThrown) {
-            alert("Fail");
-        })
+            }).done(function (res) {
+                $("tbody").empty();
+                loadData();
+                toast({
+                    title: "Thêm nhân viên thành công",
+                    type: "success",
+                    duration: 3000
+                });
+                document.getElementById("form-infor").style.display = "none";
+                document.getElementById("b-form").style.display = "none";
+                $("#form-infor").attr("status", 0);
+            }).fail(function (xhr, textStatus, errorThrown) {
+                toast({
+                    title: "Thêm nhân viên thất bại",
+                    type: "error",
+                    duration: 3000
+                });
+                document.getElementById("form-infor").style.display = "none";
+                document.getElementById("b-form").style.display = "none";
+                $("#form-infor").attr("status", 0);
+            });
+        }
+        else {
+
+            $.ajax({
+                method: "PUT",
+                url: "http://cukcuk.manhnv.net/v1/Employees/" + employeeID,
+                dataType: "json",
+                data: d,
+                contentType: "application/json-patch+json",
+
+            }).done(function (res) {
+                $("tbody").empty();
+                loadData();
+                toast({
+                    title: "Sửa dữ liệu thành công",
+                    type: "success",
+                    duration: 3000
+                });
+                document.getElementById("form-infor").style.display = "none";
+                document.getElementById("b-form").style.display = "none";
+                $("#form-infor").attr("status", 0);
+            }).fail(function (xhr, textStatus, errorThrown) {
+                toast({
+                    title: "Sửa dữ liệu thất bại",
+                    type: "error",
+                    duration: 3000
+                });
+                document.getElementById("form-infor").style.display = "none";
+                document.getElementById("b-form").style.display = "none";
+                $("#form-infor").attr("status", 0);
+            });
+        }
+
     }
 }
 /**

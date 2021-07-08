@@ -1,5 +1,13 @@
+var idEmployee = new Array();
+var listDepartment = new Array();
+var listPosition = new Array();
+var idDepartments = new Array();
+var idPosistions = new Array();
 $(document).ready(function () {
     loadData();
+    loadDepartment();
+    loadPosition();
+    
 });
 
 /**--------------------------
@@ -29,7 +37,7 @@ function loadData() {
             salary = checkInvalid(item["Salary"]);
             salary = formatSalary(salary);
             workStatusName = checkInvalid(item["WorkStatusName"]);
-            var tr = `<tr name="`+employeeId+`">
+            var tr = `<tr index="`+index+`">
                         <td class="code">`+ employeeCode + `</td>
                         <td>`+ fullName + `</td>
                         <td>`+ genderName + `</td>
@@ -42,10 +50,20 @@ function loadData() {
                         <td>`+ workStatusName + `</td>
                     </tr>`;
             $('tbody').append(tr);
+            idEmployee.push(employeeId);
         });
         $('#amount-employee').text(res.length);
+        toast({
+            title: "Tải dữ liệu thành công",
+            type : "success",
+            duration : 3000
+        });
     }).fail(function (res) {
-        alert("Không thể lấy được dữ liệu");
+        toast({
+            title: "Tải dữ liệu thất bại",
+            type : "error",
+            duration : 3000
+        });
     });
 }
 
@@ -96,6 +114,11 @@ function formatSalary(salary){
     }
     salary = salary.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
     return salary;
+}
+
+function refesh(){
+    $("tbody").empty();
+    loadData();
 }
 
 /**
@@ -188,3 +211,91 @@ document.getElementById("content-selected5").addEventListener("focus", () => {
 document.getElementById("content-selected5").addEventListener("blur", () => {
     document.getElementById("selected5").classList.remove("input-focus");
 });
+
+/**
+ * Lấy dữ liệu phòng ban
+ * create by: TQHa (8/7/2021)
+ */
+function loadDepartment(){
+    $.ajax({
+        method: "GET",
+        url : "http://cukcuk.manhnv.net/api/Department"
+    }).done(function(res){
+        var data = res;
+        $.each(data, function (index, item){
+            nameDepartment = item["DepartmentName"];
+            idDepartment = item["DepartmentId"];
+            debugger
+            console.log(nameDepartment);
+            listDepartment.push(nameDepartment);
+            debugger
+            idDepartments.push(idDepartment);
+        }
+        
+    )}).fail(function(res){
+        toast({
+            title: "Tải dữ liệu phòng ban thất bại",
+            type : "error",
+            duration : 3000
+        });
+    })
+}
+
+/**
+ * Lấy dữ liệu vị trí
+ * create by: TQHa (8/7/2021)
+ */
+ function loadPosition(){
+    $.ajax({
+        method: "GET",
+        url : "http://cukcuk.manhnv.net/v1/Positions"
+    }).done(function(res){
+        var data = res;
+        $.each(data, function (index, item){
+            namePosition = item["PositionName"];
+            idPosistion = item["PositionId"];
+
+            listPosition.push(namePosition);
+            idPosistions.push(idPosistion);
+        }
+    )}).fail(function(res){
+        toast({
+            title: "Tải dữ liệu vị trí thất bại",
+            type : "error",
+            duration : 3000
+        });
+    })
+}
+
+/**
+ * Thêm dữ liệu vào combo box
+ * @param {Number} i số hiệu id
+ * @param {Number} type type = 0 là phòng ban, type = 1 là vị trí
+ * create by: TQHa (8/7/2021) 
+ */
+function bindingDataToComboBox(i, type){
+    if(type == 0){
+        var id = "options-container"+i;
+        var main = document.getElementById(id);
+        console.log(listDepartment);
+        for (var i = 0; i < listDepartment.length; i++){
+            console.log(listDepartment[i]);
+            var div = document.createElement("div");
+            div.classList.add("option");
+            div.classList.add("option-selected");
+            div.classList.add(`option${i}`);
+            
+            div.innerHTML= `
+            
+              <input type="radio" class="radio" id="room-${i}"/>
+              <label for="room-${i}">${listDepartment[i]}</label>
+            
+            `;
+            main.appendChild(div);
+            
+        }
+        
+    }
+}
+
+bindingDataToComboBox(0,0);
