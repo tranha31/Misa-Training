@@ -21,14 +21,14 @@ document.getElementById("addemployee").addEventListener('click', () => {
         document.getElementById("input1").value = res;
         toast({
             title: "Form thêm nhân viên mới",
-            type : "info",
-            duration : 3000
+            type: "info",
+            duration: 3000
         });
     }).fail(function (res) {
         toast({
             title: "Hiển thị form thêm nhân viên mới thất bại",
-            type : "error",
-            duration : 3000
+            type: "error",
+            duration: 3000
         });
     })
     document.getElementById("input1").focus();
@@ -52,11 +52,11 @@ document.getElementById("addemployee").addEventListener('click', () => {
         element.style.display = "none";
     });
     trigles = document.querySelectorAll(".trigle");
-    trigles.forEach(element=>{
+    trigles.forEach(element => {
         element.style.display = "none";
     });
     inputs = document.querySelectorAll(".input");
-    inputs.forEach(element=>{
+    inputs.forEach(element => {
         element.classList.remove("input-error");
     });
 });
@@ -65,7 +65,7 @@ document.getElementById("addemployee").addEventListener('click', () => {
  * Hiển thị cảnh báo đóng form
  * create by: TQHa (8/7/2021)
  */
-function warningCloseForm(){
+function warningCloseForm() {
     $("#pop-up").fadeIn();
     document.getElementById("form-infor").style.zIndex = 0;
     document.getElementById("b-form").style.display = "block";
@@ -76,26 +76,36 @@ function warningCloseForm(){
     document.getElementById("cancel").innerHTML = "Tiếp tục nhập";
     document.getElementById("submit").innerHTML = "Đóng";
     document.getElementById("submit").style.backgroundColor = "#01B075";
+
+    document.getElementById("submit").removeEventListener("click", eventHiddenSubmit);
+    document.getElementById("submit").addEventListener("click", eventHiddenSubmit);
     
-    $("#submit").unbind();
-    document.getElementById("submit").addEventListener("click", function(){
-        hiddenForm();
-        document.getElementById("form-infor").style.zIndex = 20;
-        $("#pop-up").hide();
-    });
-    $("close-pop-up").unbind();
-    document.getElementById("close-pop-up").addEventListener("click", function(){
-        
-        document.getElementById("form-infor").style.zIndex = 20;
-        $("#pop-up").hide();
-    });
-    $("cancel").unbind();
-    document.getElementById("cancel").addEventListener("click", function(){
-        document.getElementById("form-infor").style.zIndex = 20;
-        $("#pop-up").hide();
-    })
+    document.getElementById("close-pop-up").removeEventListener("click", eventHiddenCancel);
+    document.getElementById("close-pop-up").addEventListener("click", eventHiddenCancel);
+    
+    document.getElementById("cancel").removeEventListener("click", eventHiddenCancel);
+    document.getElementById("cancel").addEventListener("click", eventHiddenCancel);
 
 }
+/**
+ * Điều khiển submit
+ * create by: TQHa (8/7/2021)
+ */
+function eventHiddenSubmit() {
+    hiddenForm();
+    document.getElementById("form-infor").style.zIndex = 20;
+    $("#pop-up").hide();
+}
+
+/**
+ * Điều khiển cancel
+ * create by: TQHa (8/7/2021)
+ */
+function eventHiddenCancel(){
+    document.getElementById("form-infor").style.zIndex = 20;
+    $("#pop-up").hide();
+}
+
 /** ------------------------------
  * Ẩn form thêm nhân viên
  * Create by: TQHa (5/7/2021)
@@ -109,7 +119,7 @@ function hiddenForm() {
  * Tắt popup 
  * create by : TQHa (8/7/2021)
  */
- function hiddenPopUp(){
+function hiddenPopUp() {
     document.getElementById("pop-up").style.display = "none";
     document.getElementById("b-form").style.display = "none";
     document.getElementById("form-infor").style.zIndex = 20;

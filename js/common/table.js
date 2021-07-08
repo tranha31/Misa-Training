@@ -81,14 +81,14 @@ $("tbody").on("dblclick", "tr", function () {
         });
         toast({
             title: "Hiển thị dữ liệu nhân viên",
-            type : "info",
-            duration : 3000
+            type: "info",
+            duration: 3000
         });
     }).fail(function (res) {
         toast({
             title: "Không thể hiển thị thông tin nhân viên",
-            type : "warning",
-            duration : 3000
+            type: "warning",
+            duration: 3000
         });
     })
 });
@@ -131,33 +131,39 @@ function deleteWarning() {
         document.getElementById("submit").innerHTML = "Xóa";
         document.getElementById("submit").style.backgroundColor = "#FF4747";
 
-        $("#submit").unbind();
-        document.getElementById("submit").addEventListener("click", function () {
-            document.getElementById("b-form").style.display = "none";
-            $("#pop-up").hide();
-            deleteEmployee();
-
-        });
-        $("close-pop-up").unbind();
-        document.getElementById("close-pop-up").addEventListener("click", function () {
-            document.getElementById("b-form").style.display = "none";
-            $("#pop-up").hide();
-        });
-        $("cancel").unbind();
-        document.getElementById("cancel").addEventListener("click", function () {
-            document.getElementById("b-form").style.display = "none";
-            $("#pop-up").hide();
-        })
+        document.getElementById("submit").removeEventListener("click", eventPopUp1);
+        document.getElementById("submit").addEventListener("click", eventPopUp1);
+        
+        document.getElementById("close-pop-up").removeEventListener("click", eventPopUp2);
+        document.getElementById("close-pop-up").addEventListener("click", eventPopUp2);
+        
+        document.getElementById("cancel").removeEventListener("click");
+        document.getElementById("cancel").addEventListener("click", eventPopUp2);
     }
-    else{
+    else {
         toast({
             title: "Bạn chưa chọn nhân viên cần xóa",
-            type : "warning",
-            duration : 3000
+            type: "warning",
+            duration: 3000
         });
     }
 
 }
+
+/**
+ * Điều khiển popup
+ * create by : TQHa (8/7/2021)
+ */
+function eventPopUp1() {
+    document.getElementById("b-form").style.display = "none";
+    $("#pop-up").hide();
+    deleteEmployee();
+}
+function eventPopUp2() {
+    document.getElementById("b-form").style.display = "none";
+    $("#pop-up").hide();
+}
+
 /**
  * Xóa nhân viên
  * create by: TQHa (8/7/2021)
@@ -170,19 +176,21 @@ function deleteEmployee() {
     }).done(function (res) {
         $("tbody").empty();
         loadData();
+        document.getElementById("submit").removeEventListener("click", eventPopUp1);
         toast({
             title: "Xóa nhân viên thành công",
-            type : "success",
-            duration : 3000
+            type: "success",
+            duration: 3000
         });
-        $("#delete-btn").attr("index","");
+        $("#delete-btn").attr("index", "");
     }).fail(function (res) {
+        document.getElementById("submit").removeEventListener("click", eventPopUp1);
         toast({
             title: "Xóa nhân viên thất bại",
-            type : "error",
-            duration : 3000
+            type: "error",
+            duration: 3000
         });
     });
-    
+
 }
 
