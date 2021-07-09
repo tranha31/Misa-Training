@@ -96,7 +96,7 @@
     <div class="content-bar">
       <div class="input" id="div-input0">
         <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"
-          onkeyup="displayDeleteContent(0)" />
+          onkeyup="displayDeleteContent(0)" index=""/>
         <div class="delete-icon" id="delete-input0" onclick="deleteContent(0)"></div>
       </div>
 
@@ -105,7 +105,7 @@
         <div class="select-box">
           <div class="selected selected0" id="selected0">
             <input class="content-selected" id="content-selected0" placeholder="Chọn/Nhập phòng ban"
-              onkeyup="displayDeleteContentInput(0)">
+              onkeyup="displayDeleteContentInput(0, 0)">
             <div class="delete-icon" id="delete-icon0" onclick="deleleContentInput(0)"></div>
             <div class="icon-select" id="selected-0"></div>
           </div>
@@ -121,25 +121,13 @@
         <div class="select-box">
           <div class="selected selected1" id="selected1">
             <input class="content-selected" id="content-selected1" placeholder="Chọn/Nhập vị trí"
-              onkeyup="displayDeleteContentInput(1)">
+              onkeyup="displayDeleteContentInput(1,1)">
             <div class="delete-icon" id="delete-icon1" onclick="deleleContentInput(1)"></div>
             <div class="icon-select" id="selected-1"></div>
           </div>
-          <div class="options-container options-container1">
+          <div class="options-container options-container1" id="options-container1">
 
-            <div class="option option-selected option1">
-              <input type="radio" class="radio" id="all-position" name="category1" />
-              <label for="all-position">Tất cả vị trí</label>
-            </div>
-            <div class="option option1">
-              <input type="radio" class="radio" id="manager" name="category1" />
-              <label for="manager">Trưởng phòng</label>
-            </div>
-            <div class="option option1">
-              <input type="radio" class="radio" id="employee" name="category1" />
-              <label for="employee">Nhân viên</label>
-            </div>
-
+            
           </div>
         </div>
       </div>
@@ -267,11 +255,12 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected2 " id="selected2">
                     <input class="content-selected" id="content-selected2" placeholder="Lựa chọn giới tính"
-                      onkeyup="displayDeleteContentInput(2)" readonly>
+                      onkeyup="displayDeleteContentInput(2)" value="Nam" >
                     <div class="delete-icon" id="delete-icon2" onclick="deleleContentInput(2)"></div>
                     <div class="icon-select icon-form" id="selected-2"></div>
                   </div>
-                  <div class="options-container options-container2 options-container-form">
+                  <div class="options-container options-container2 
+                  options-container-form" id="options-container2" >
 
                     <div class="option option-selected option2">
                       <input type="radio" class="radio" id="male" name="em-gen" />
@@ -283,7 +272,7 @@
                     </div>
                     <div class="option option2">
                       <input type="radio" class="radio" id="another" name="em-gen" />
-                      <label for="another">Khác</label>
+                      <label for="another">Không xác định</label>
                     </div>
                   </div>
                 </div>
@@ -351,20 +340,13 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected3 " id="selected3">
                     <input class="content-selected" id="content-selected3" placeholder="Chọn/Nhập vị trí"
-                      onkeyup="displayDeleteContentInput(3)">
+                      onkeyup="displayDeleteContentInput(3,1)">
                     <div class="delete-icon" id="delete-icon3" onclick="deleleContentInput(3)"></div>
                     <div class="icon-select icon-form" id="selected-3"></div>
                   </div>
-                  <div class="options-container options-container3 options-container-form">
+                  <div class="options-container options-container3 options-container-form" id="options-container3">
 
-                    <div class="option option-selected option3">
-                      <input type="radio" class="radio" id="ceo" name="em-pos" />
-                      <label for="ceo">Giám đốc</label>
-                    </div>
-                    <div class="option option3">
-                      <input type="radio" class="radio" id="employee1" name="em-pos" />
-                      <label for="employee1">Nhân viên</label>
-                    </div>
+                    
 
                   </div>
                 </div>
@@ -378,21 +360,12 @@
                 <div class="select-box select-on-form">
                   <div class="selected selected4 " id="selected4">
                     <input class="content-selected" id="content-selected4" placeholder="Chọn/Nhập phòng ban"
-                      onkeyup="displayDeleteContentInput(4)">
+                      onkeyup="displayDeleteContentInput(4,0)">
                     <div class="delete-icon" id="delete-icon4" onclick="deleleContentInput(4)"></div>
                     <div class="icon-select icon-form" id="selected-4"></div>
                   </div>
-                  <div class="options-container options-container4 options-container-form">
-
-                    <div class="option option-selected option4">
-                      <input type="radio" class="radio" id="em-room-hr" name="em-room" />
-                      <label for="em-room-hr">Phòng nhân sự</label>
-                    </div>
-                    <div class="option option4">
-                      <input type="radio" class="radio" id="em-room-count" name="em-room" />
-                      <label for="em-room-count">Phòng kế toán</label>
-                    </div>
-
+                  <div class="options-container options-container4 options-container-form" id="options-container4">
+                    
                   </div>
                 </div>
               </div>

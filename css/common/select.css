@@ -145,3 +145,11 @@
     border: none;
     left: 160px !important;
 }
+
+#input0{
+    padding-left: 40px !important;
+    background-image: url(../../content/icons/search.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 16px center;
+}

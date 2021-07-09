@@ -37,7 +37,8 @@ function deleteContent(i) {
     $(x).val("");
     let y = "delete-input" + i;
     document.getElementById(y).style.visibility = "hidden";
-    notificationNull(i)
+    notificationNull(i);
+    
 }
 
 

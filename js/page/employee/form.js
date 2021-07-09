@@ -24,6 +24,7 @@ document.getElementById("addemployee").addEventListener('click', () => {
             type: "info",
             duration: 3000
         });
+        
     }).fail(function (res) {
         toast({
             title: "Hiển thị form thêm nhân viên mới thất bại",
