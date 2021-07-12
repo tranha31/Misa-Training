@@ -3,14 +3,19 @@ const listDepartment = new Array();
 var listPosition = new Array();
 var idDepartments = new Array();
 var idPosistions = new Array();
+var listGender = ['Nam', 'Nữ', 'Không xác định'];
+var idGender = ["0", "1", "2"];
+var listStatusWork = ["Đang làm việc", "Đã nghỉ việc", "Thực tập"];
+var idStatusWork = ["0", "1", "2"];
 $(document).ready(function () {
     loadData();
     loadDepartment();
     loadPosition();
     bindingDataToComboBox(0, 0);
     bindingDataToComboBox(1, 1);
-    bindingDataToComboBox(4, 0);
-    bindingDataToComboBox(3, 1);
+
+    $("#form-infor").draggable();
+    
 });
 
 /**--------------------------
@@ -47,7 +52,7 @@ function loadData() {
                         <td>`+ genderName + `</td>
                         <td class="date-of-brith">`+ dateOfBirth + `</td>
                         <td>`+ phoneNumber + `</td>
-                        <td class="email">`+ email + `</td>
+                        <td class="email" title="${email}">`+ email + `</td>
                         <td>`+ positionName + `</td>
                         <td>`+ departmentName + `</td>
                         <td class="salary">`+ salary + `</td>
@@ -197,6 +202,12 @@ document.getElementById("content-selected1").addEventListener("focus", () => {
 document.getElementById("content-selected1").addEventListener("blur", () => {
     document.getElementById("selected1").classList.remove("input-focus");
 });
+document.getElementById("content-selected2").addEventListener("focus", () => {
+    document.getElementById("selected2").classList.add("input-focus");
+});
+document.getElementById("content-selected2").addEventListener("blur", () => {
+    document.getElementById("selected2").classList.remove("input-focus");
+});
 document.getElementById("content-selected3").addEventListener("focus", () => {
     document.getElementById("selected3").classList.add("input-focus");
 });
@@ -235,6 +246,7 @@ function loadDepartment() {
 
             idDepartments.push(idDepartment);
         });
+        
 
     }).fail(function (res) {
         toast({
@@ -263,6 +275,7 @@ function loadPosition() {
             listPosition.push(namePosition);
             idPosistions.push(idPosistion);
         });
+        
     }).fail(function (res) {
         toast({
             title: "Tải dữ liệu vị trí thất bại",
@@ -316,7 +329,9 @@ function bindingDataToComboBox(i, type) {
         else {
             var id = "options-container" + i;
             var main = document.getElementById(id);
-
+            //main.empty();
+            var z = "content-selected" + i;
+            //document.getElementById(z).value = listDepartment[0];
 
             for (var k = 0; k < listDepartment.length; k++) {
 
@@ -324,11 +339,14 @@ function bindingDataToComboBox(i, type) {
                 div.classList.add("option");
 
                 div.classList.add(`option${i}`);
+                // if(k == 0){
+                //     div.classList.add(`option-selected`);
+                // }
 
                 div.innerHTML = `
             
-              <input type="radio" class="radio" id="room-${k}"/>
-              <label for="room-${k}">${listDepartment[k]}</label>
+              <input type="radio" class="radio" id="roomform-${k}"/>
+              <label for="roomform-${k}">${listDepartment[k]}</label>
             
             `;
                 main.appendChild(div);
@@ -341,6 +359,7 @@ function bindingDataToComboBox(i, type) {
         if (i == 1) {
             var id = "options-container" + i;
             var main = document.getElementById(id);
+            main.innerHTML = "";
             var d = document.createElement("div");
             d.classList.add("option");
             d.classList.add(`option${i}`);
@@ -372,20 +391,26 @@ function bindingDataToComboBox(i, type) {
 
         }
         else {
+            
             var id = "options-container" + i;
             var main = document.getElementById(id);
 
+            //main.empty();
+            var z = "content-selected" + i;
+            //document.getElementById(z).value = listPosition[0];
             for (var k = 0; k < listPosition.length; k++) {
 
                 var div = document.createElement("div");
                 div.classList.add("option");
 
                 div.classList.add(`option${i}`);
-
+                // if(k == 0){
+                //     div.classList.add("option-selected");
+                // }
                 div.innerHTML = `
             
-              <input type="radio" class="radio" id="position-${k}"/>
-              <label for="position-${k}">${listPosition[k]}</label>
+              <input type="radio" class="radio" id="positionform-${k}"/>
+              <label for="positionform-${k}">${listPosition[k]}</label>
             
             `;
                 main.appendChild(div);

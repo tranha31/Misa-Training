@@ -24,7 +24,42 @@ document.getElementById("addemployee").addEventListener('click', () => {
             type: "info",
             duration: 3000
         });
-        
+        document.getElementById("input1").focus();
+        $("#input2").val("");
+        $("#em-date-birth").val("");
+        $("#content-selected2").val("");
+        $("#input3").val("");
+        $("#em-date-cmt").val("");
+        $("#input5").val("");
+        $("#employee-id").val("");
+        $("#input6").val("");
+        $("#input7").val("");
+        $("#content-selected3").val("");
+        $("#content-selected4").val("");
+        $("#input8").val("");
+        $("#input9").val("");
+        $("#em-join").val("");
+        $("#content-selected5").val("");
+        bindingDataToComboBox(4, 0);
+        bindingDataToComboBox(3, 1);
+        errors = document.querySelectorAll(".error");
+        errors.forEach(element => {
+            element.style.display = "none";
+        });
+        trigles = document.querySelectorAll(".trigle");
+        trigles.forEach(element => {
+            element.style.display = "none";
+        });
+        inputs = document.querySelectorAll(".input");
+        inputs.forEach(element => {
+            element.classList.remove("input-error");
+        });
+        document.getElementById("selected2").classList.remove("selected-error");
+        document.getElementById("selected3").classList.remove("selected-error");
+        document.getElementById("selected4").classList.remove("selected-error");
+        document.getElementById("selected5").classList.remove("selected-error");
+
+
     }).fail(function (res) {
         toast({
             title: "Hiển thị form thêm nhân viên mới thất bại",
@@ -32,34 +67,7 @@ document.getElementById("addemployee").addEventListener('click', () => {
             duration: 3000
         });
     })
-    document.getElementById("input1").focus();
-    $("#input2").val("");
-    $("#em-date-birth").val("");
-    $("#content-selected2").val("");
-    $("#input3").val("");
-    $("#em-date-cmt").val("");
-    $("#input5").val("");
-    $("#employee-id").val("");
-    $("#input6").val("");
-    $("#input7").val("");
-    $("#content-selected3").val("");
-    $("#content-selected4").val("");
-    $("#input8").val("");
-    $("#input9").val("");
-    $("#em-join").val("");
-    $("#content-selected5").val("");
-    errors = document.querySelectorAll(".error");
-    errors.forEach(element => {
-        element.style.display = "none";
-    });
-    trigles = document.querySelectorAll(".trigle");
-    trigles.forEach(element => {
-        element.style.display = "none";
-    });
-    inputs = document.querySelectorAll(".input");
-    inputs.forEach(element => {
-        element.classList.remove("input-error");
-    });
+
 });
 
 /**
@@ -80,10 +88,10 @@ function warningCloseForm() {
 
     document.getElementById("submit").removeEventListener("click", eventHiddenSubmit);
     document.getElementById("submit").addEventListener("click", eventHiddenSubmit);
-    
+
     document.getElementById("close-pop-up").removeEventListener("click", eventHiddenCancel);
     document.getElementById("close-pop-up").addEventListener("click", eventHiddenCancel);
-    
+
     document.getElementById("cancel").removeEventListener("click", eventHiddenCancel);
     document.getElementById("cancel").addEventListener("click", eventHiddenCancel);
 
@@ -102,7 +110,7 @@ function eventHiddenSubmit() {
  * Điều khiển cancel
  * create by: TQHa (8/7/2021)
  */
-function eventHiddenCancel(){
+function eventHiddenCancel() {
     document.getElementById("form-infor").style.zIndex = 20;
     $("#pop-up").hide();
 }
@@ -178,3 +186,6 @@ function fileValidation() {
     }
 }
 
+document.getElementById("div-hidden").addEventListener("focus", function(){
+    $("#input1").focus();
+});

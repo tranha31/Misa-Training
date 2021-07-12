@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     font-family: GoogleSans-Regular;
     font-size: 13px;
+    display: inline;
 }
 @font-face {
     font-family: GoogleSans-Regular;
@@ -58,8 +59,8 @@ input[type="text"]:focus, input[type="date"]:focus{
     font-family: GoogleSans-Italic;
 }
 .delete-icon{
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 25px;
     border-radius: 50%;
     background-color: #e5e5e5;
     margin-top: auto;
@@ -73,8 +74,11 @@ input[type="text"]:focus, input[type="date"]:focus{
     visibility:hidden; 
 }
 .delete-icon:hover{
-    cursor: pointer;
+    
     background-color: #bbbbbb;
+}
+.icon-select{
+    cursor: pointer;
 }
 .input{
     height: 40px;

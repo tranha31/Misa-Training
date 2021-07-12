@@ -137,7 +137,7 @@ function deleteWarning() {
         document.getElementById("close-pop-up").removeEventListener("click", eventPopUp2);
         document.getElementById("close-pop-up").addEventListener("click", eventPopUp2);
         
-        document.getElementById("cancel").removeEventListener("click");
+        document.getElementById("cancel").removeEventListener("click",eventPopUp2);
         document.getElementById("cancel").addEventListener("click", eventPopUp2);
     }
     else {

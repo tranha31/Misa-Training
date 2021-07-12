@@ -87,6 +87,27 @@ function postValue() {
         result = false;
     }
 
+    var id = "selected2";
+
+    if (document.getElementById(id).classList.contains("selected-error")) {
+        notificationInputAfterSubmit(15, "Dữ liệu không hợp lệ");
+        result = false;
+    }
+    if (document.getElementById("selected3").classList.contains("selected-error")) {
+        notificationInputAfterSubmit(16, "Dữ liệu không hợp lệ");
+        
+        result = false;
+    }
+    if (document.getElementById("selected4").classList.contains("selected-error")) {
+        notificationInputAfterSubmit(17, "Dữ liệu không hợp lệ");
+        
+        result = false;
+    }
+    if (document.getElementById("selected5").classList.contains("selected-error")) {
+        notificationInputAfterSubmit(18, "Dữ liệu không hợp lệ");
+        
+        result = false;
+    }
     //Nếu thỏa mãn hết điều kiện thì gửi 
     if (result) {
         var gender;
@@ -98,6 +119,20 @@ function postValue() {
         }
         else {
             gender = 2;
+        }
+        var departID = "";
+        var positionID = "";
+        for (i = 0; i < listDepartment.length; i++) {
+            if (employeeDepartment == listDepartment[i]) {
+                departID = idDepartments[i];
+                break;
+            }
+        }
+        for (i = 0; i < listPosition.length; i++) {
+            if (employeePosition == listPosition[i]) {
+                positionID = idPosistions[i];
+                break;
+            }
         }
         employeeSalary = employeeSalary.split('.').join("");
         let d = {
@@ -115,6 +150,8 @@ function postValue() {
             Salary: employeeSalary,
             PositionName: employeePosition,
             DepartmentName: employeeDepartment,
+            PositionId: positionID,
+            DepartmentId: departID
         };
         d = JSON.stringify(d);
         s = $("#form-infor").attr("status");
@@ -128,7 +165,7 @@ function postValue() {
 
             }).done(function (res) {
                 $("tbody").empty();
-                loadData();
+                localcation.reload();
                 toast({
                     title: "Thêm nhân viên thành công",
                     type: "success",
@@ -418,6 +455,11 @@ function notificationInputAfterSubmit(i, content) {
         document.getElementById(idError).innerHTML = content;
         document.getElementById(idTrigle).style.display = "flex";
         document.getElementById("em-date-birth").classList.add("input-error");
+    }
+    if (i == 15 || i == 16 || i == 17 || i == 18) {
+        document.getElementById(idError).style.display = "flex";
+        document.getElementById(idError).innerHTML = content;
+        document.getElementById(idTrigle).style.display = "flex";
     }
     else {
         document.getElementById(idError).style.display = "flex";

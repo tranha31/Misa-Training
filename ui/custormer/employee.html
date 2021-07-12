@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Misa Cukcuk</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="../../js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="sheetstyle">
   <link href="../../css/common/common.css" rel="stylesheet" />
   <link href="../../css/common/popup.css" rel="stylesheet">
   <link href="../../css/common/toast.css" rel="stylesheet">
@@ -22,20 +23,20 @@
 </head>
 
 <body>
-   <div class="header">
+  <div class="header">
     <div class="header-top" id="header-top">
       <div id="menu" class="header-top-img" onclick="resizeMenu()"></div>
       <div class="header-top-logo"></div>
     </div>
     <div class="header-infor">
-      <div class="select-container" onmouseup="setEvent(6)">
+      <div class="select-container">
 
         <div class="select-box select-box-header">
           <div class="selected selected6 select-header">
             <div class="content-selected content-selected-header" id="content-selected6">Nhà hàng Biển Đông</div>
-            <div class="icon-select icon-select-header" id="selected-6"></div>
+            <div class="icon-select icon-select-header" id="selected-6" onmouseup="setEvent(6)"></div>
           </div>
-          <div class="options-container options-container6 options-container-header">
+          <div id="options-container6" class="options-container options-container6 options-container-header">
 
             <div class="option option-selected option6">
               <input type="radio" class="radio" id="company1" name="company" />
@@ -96,38 +97,37 @@
     <div class="content-bar">
       <div class="input" id="div-input0">
         <input id="input0" type="text" class="filter-bar" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"
-          onkeyup="displayDeleteContent(0)" index=""/>
+          onkeyup="displayDeleteContent(0)" index="" />
         <div class="delete-icon" id="delete-input0" onclick="deleteContent(0)"></div>
       </div>
 
-      <div class="select-container" onmouseup="setEvent(0)">
+      <div class="select-container">
 
         <div class="select-box">
           <div class="selected selected0" id="selected0">
-            <input class="content-selected" id="content-selected0" placeholder="Chọn/Nhập phòng ban"
-              onkeyup="displayDeleteContentInput(0, 0)">
-            <div class="delete-icon" id="delete-icon0" onclick="deleleContentInput(0)"></div>
-            <div class="icon-select" id="selected-0"></div>
+            <input class="content-selected" id="content-selected0" 
+            placeholder="Chọn/Nhập phòng ban" index="0" title="">
+            <div class="delete-icon" id="delete-icon0"></div>
+            <div class="icon-select" id="selected-0" onmouseup="setEvent(0)"></div>
           </div>
           <div class="options-container options-container0" id="options-container0">
 
-            
+
 
           </div>
         </div>
       </div>
-      <div class="select-container" onmouseup="setEvent(1)">
+      <div class="select-container">
 
         <div class="select-box">
           <div class="selected selected1" id="selected1">
-            <input class="content-selected" id="content-selected1" placeholder="Chọn/Nhập vị trí"
-              onkeyup="displayDeleteContentInput(1,1)">
-            <div class="delete-icon" id="delete-icon1" onclick="deleleContentInput(1)"></div>
-            <div class="icon-select" id="selected-1"></div>
+            <input class="content-selected" id="content-selected1" placeholder="Chọn/Nhập vị trí" index="1">
+            <div class="delete-icon" id="delete-icon1"></div>
+            <div class="icon-select" id="selected-1" onmouseup="setEvent(1)"></div>
           </div>
           <div class="options-container options-container1" id="options-container1">
 
-            
+
           </div>
         </div>
       </div>
@@ -172,14 +172,14 @@
         <div class="move last"></div>
       </div>
       <div class="amount-employee-page">
-        <div class="select-container" onmouseup="setEvent(7)">
+        <div class="select-container">
 
           <div class="select-box select-box-footer">
             <div class="selected selected7">
               <div class="content-selected content-selected-footer" id="content-selected7">10 nhân viên/trang</div>
-              <div class="icon-select icon-select-footer" id="selected-7"></div>
+              <div class="icon-select icon-select-footer" id="selected-7" onmouseup="setEvent(7)"></div>
             </div>
-            <div class="options-container options-container7 options-container-footer">
+            <div id="options-container7" class="options-container options-container7 options-container-footer">
 
               <div class="option option-selected option7">
                 <input type="radio" class="radio" id="amount-15emp" name="amount" />
@@ -209,7 +209,7 @@
     <div class="form-content">
       <div class="avatar">
         <label class="employee-avatar" id="dislay-avatar" for="a-1">
-          <input type="file" name="avatar" id="a-1" onchange="return fileValidation()">
+          <input tabindex="1" type="file" name="avatar" id="a-1" onchange="return fileValidation()">
         </label>
         <p style="color: #454545;">(Vui lòng chọn ảnh có định <br>dạng<br> .jpg, .jpeg, .png, .gif.)</p>
       </div>
@@ -221,7 +221,7 @@
             <div class="item em-code item1">
               <label>Mã nhân viên (<span>*</span>)</label>
               <div class="input input-form" id="div-input1">
-                <input type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên"
+                <input tabindex="2" type="text" class="filter-bar" name="em-code" id="input1" placeholder="Nhập mã số nhân viên"
                   onkeyup="displayDeleteContent(1)" readonly>
                 <div class="delete-icon" id="delete-input1" onclick="deleteContent(1)"></div>
                 <div class="error" id="error-em-code1"></div>
@@ -232,7 +232,7 @@
             <div class="item em-name">
               <label>Họ và tên (<span>*</span>)</label>
               <div class="input input-form" id="div-input2">
-                <input type="text" class="filter-bar" name="em-name" id="input2" placeholder="Nhập họ và tên nhân viên"
+                <input tabindex="3" type="text" class="filter-bar" name="em-name" id="input2" placeholder="Nhập họ và tên nhân viên"
                   onkeyup="displayDeleteContent(2)">
                 <div class="delete-icon" id="delete-input2" onclick="deleteContent(2)"></div>
                 <div class="error" id="error-em-code2"></div>
@@ -242,7 +242,7 @@
             </div>
             <div class="item em-date item1" id="div-input10" style="position: relative;">
               <label>Ngày sinh</label>
-              <input type="date" name="em-date" id="em-date-birth">
+              <input tabindex="4" type="date" name="em-date" id="em-date-birth">
               <div class="error error-date" id="error-em-code10"></div>
               <div class="trigle trigle-date" id="trigle-em-code10"></div>
             </div>
@@ -250,30 +250,20 @@
               <div class="trigle" id="trigle-em-code1"></div> -->
             <div class="item em-gen">
               <label>Giới tính</label>
-              <div class="select-container" onmouseup="setEvent(2)">
+              <div class="select-container">
 
                 <div class="select-box select-on-form">
                   <div class="selected selected2 " id="selected2">
-                    <input class="content-selected" id="content-selected2" placeholder="Lựa chọn giới tính"
-                      onkeyup="displayDeleteContentInput(2)" value="Nam" >
-                    <div class="delete-icon" id="delete-icon2" onclick="deleleContentInput(2)"></div>
-                    <div class="icon-select icon-form" id="selected-2"></div>
+                    <input tabindex="5" class="content-selected" id="content-selected2" placeholder="Chọn/nhập giới tính" index="">
+                    <div class="delete-icon" id="delete-icon2"></div>
+                    <div class="icon-select icon-form" id="selected-2" onmouseup="setEvent(2)"></div>
+                    <div class="error" id="error-em-code15" style="line-height: 17px"></div>
+                    <div class="trigle" id="trigle-em-code15"></div>
                   </div>
                   <div class="options-container options-container2 
-                  options-container-form" id="options-container2" >
+                  options-container-form" id="options-container2">
 
-                    <div class="option option-selected option2">
-                      <input type="radio" class="radio" id="male" name="em-gen" />
-                      <label for="male">Nam</label>
-                    </div>
-                    <div class="option option2">
-                      <input type="radio" class="radio" id="female" name="em-gen" />
-                      <label for="female">Nữ</label>
-                    </div>
-                    <div class="option option2">
-                      <input type="radio" class="radio" id="another" name="em-gen" />
-                      <label for="another">Không xác định</label>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -282,7 +272,7 @@
             <div class="item em-cmt item1">
               <label>Số CMTND/Căn cước (<span>*</span>)</label>
               <div class="input input-form" id="div-input3">
-                <input type="text" class="filter-bar" name="em-cmt" id="input3" placeholder="Nhập số CMTND/CCCD"
+                <input tabindex="6" type="text" class="filter-bar" name="em-cmt" id="input3" placeholder="Nhập số CMTND/CCCD"
                   onkeyup="displayDeleteContent(3)">
                 <div class="delete-icon" id="delete-input3" onclick="deleteContent(3)"></div>
                 <div class="error" id="error-em-code3"></div>
@@ -292,12 +282,12 @@
             </div>
             <div class="item em-date-cmt">
               <label>Ngày cấp</label>
-              <input type="date" name="em-date-cmt" id="em-date-cmt">
+              <input tabindex="7" type="date" name="em-date-cmt" id="em-date-cmt">
             </div>
             <div class="item em-place-cmt item1">
               <label>Nơi cấp</label>
               <div class="input input-form" id="div-input5">
-                <input type="text" class="filter-bar" name="em-place-cmt" id="input5"
+                <input tabindex="8" type="text" class="filter-bar" name="em-place-cmt" id="input5"
                   placeholder="Nhập nơi cấp CMTND/CCCD" onkeyup="displayDeleteContent(5)">
                 <div class="delete-icon" id="delete-input5" onclick="deleteContent(5)"></div>
               </div>
@@ -308,7 +298,7 @@
             <div class="item em-email item1">
               <label>Email (<span>*</span>)</label>
               <div class="input input-form" id="div-input6">
-                <input type="text" class="filter-bar" name="em-mail" id="input6" placeholder="Nhập địa chỉ email"
+                <input tabindex="9" type="text" class="filter-bar" name="em-mail" id="input6" placeholder="Nhập địa chỉ email"
                   onkeyup="displayDeleteContent(6)">
                 <div class="delete-icon" id="delete-input6" onclick="deleteContent(6)"></div>
                 <div class="error" id="error-em-code6"></div>
@@ -319,7 +309,7 @@
             <div class="item em-phone">
               <label>Số điện thoại (<span>*</span>)</label>
               <div class="input input-form" id="div-input7">
-                <input type="text" class="filter-bar" name="em-phone" id="input7" placeholder="Nhập số điện thoại"
+                <input tabindex="10" type="text" class="filter-bar" name="em-phone" id="input7" placeholder="Nhập số điện thoại"
                   onkeyup="displayDeleteContent(7)">
                 <div class="delete-icon" id="delete-input7" onclick="deleteContent(7)"></div>
                 <div class="error" id="error-em-code7"></div>
@@ -335,18 +325,19 @@
           <div class="content-information">
             <div class="item item1">
               <label>Vị trí</label>
-              <div class="select-container" onmouseup="setEvent(3)">
+              <div class="select-container">
 
                 <div class="select-box select-on-form">
                   <div class="selected selected3 " id="selected3">
-                    <input class="content-selected" id="content-selected3" placeholder="Chọn/Nhập vị trí"
-                      onkeyup="displayDeleteContentInput(3,1)">
-                    <div class="delete-icon" id="delete-icon3" onclick="deleleContentInput(3)"></div>
-                    <div class="icon-select icon-form" id="selected-3"></div>
+                    <input tabindex="11" class="content-selected" id="content-selected3" placeholder="Chọn/Nhập vị trí" index="">
+                    <div class="delete-icon" id="delete-icon3"></div>
+                    <div class="icon-select icon-form" id="selected-3" onmouseup="setEvent(3)"></div>
+                    <div class="error" id="error-em-code16" style="line-height: 17px"></div>
+                    <div class="trigle" id="trigle-em-code16"></div>
                   </div>
                   <div class="options-container options-container3 options-container-form" id="options-container3">
 
-                    
+
 
                   </div>
                 </div>
@@ -355,17 +346,18 @@
             </div>
             <div class="item item1">
               <label>Phòng ban</label>
-              <div class="select-container" onmouseup="setEvent(4)">
+              <div class="select-container">
 
                 <div class="select-box select-on-form">
                   <div class="selected selected4 " id="selected4">
-                    <input class="content-selected" id="content-selected4" placeholder="Chọn/Nhập phòng ban"
-                      onkeyup="displayDeleteContentInput(4,0)">
-                    <div class="delete-icon" id="delete-icon4" onclick="deleleContentInput(4)"></div>
-                    <div class="icon-select icon-form" id="selected-4"></div>
+                    <input tabindex="12" class="content-selected" id="content-selected4" placeholder="Chọn/Nhập phòng ban" index="">
+                    <div class="delete-icon" id="delete-icon4"></div>
+                    <div class="icon-select icon-form" id="selected-4" onmouseup="setEvent(4)"></div>
+                    <div class="error" id="error-em-code17" style="line-height: 17px"></div>
+                    <div class="trigle" id="trigle-em-code17"></div>
                   </div>
                   <div class="options-container options-container4 options-container-form" id="options-container4">
-                    
+
                   </div>
                 </div>
               </div>
@@ -373,7 +365,7 @@
             <div class="item item1">
               <label>Mã số thuế cá nhân</label>
               <div class="input input-form" id="div-input8">
-                <input type="text" class="filter-bar" name="em-tax-code" id="input8"
+                <input tabindex="13" type="text" class="filter-bar" name="em-tax-code" id="input8"
                   placeholder="Nhập mã số thuế cá nhân" onkeyup="displayDeleteContent(8)">
                 <div class="delete-icon" id="delete-input8" onclick="deleteContent(8)"></div>
                 <div class="error" id="error-em-code8"></div>
@@ -384,7 +376,7 @@
             <div class="item item1">
               <label>Mức lương cơ bản</label>
               <div class="input input-form" id="div-input9">
-                <input type="text" class="filter-bar" name="em-basic-salary" id="input9" placeholder="(VNĐ)"
+                <input tabindex="14" type="text" class="filter-bar" name="em-basic-salary" id="input9" placeholder="(VNĐ)"
                   onkeyup="displayDeleteContent(9)">
 
                 <div class="delete-icon" id="delete-input9" onclick="deleteContent(9)"></div>
@@ -394,29 +386,23 @@
             </div>
             <div class="item item1">
               <label>Ngày ra nhập công ty</label>
-              <input type="date" name="em-join" id="em-join">
+              <input tabindex="15" type="date" name="em-join" id="em-join">
             </div>
             <div class="item item1">
               <label>Tình trạng công việc</label>
-              <div class="select-container" onmouseup="setEvent(5)">
+              <div class="select-container">
 
                 <div class="select-box select-on-form">
                   <div class="selected selected5" id="selected5">
-                    <input class="content-selected" id="content-selected5" placeholder="Chọn/Nhập tình trạng công việc"
-                      onkeyup="displayDeleteContentInput(5)">
-                    <div class="delete-icon" id="delete-icon5" onclick="deleleContentInput(5)"></div>
-                    <div class="icon-select icon-form" id="selected-5"></div>
+                    <input tabindex="16" class="content-selected" id="content-selected5" placeholder="Chọn/Nhập tình trạng công việc">
+                    <div class="delete-icon" id="delete-icon5"></div>
+                    <div class="icon-select icon-form" id="selected-5" onmouseup="setEvent(5)"></div>
+                    <div class="error" id="error-em-code18" style="line-height: 17px"></div>
+                    <div class="trigle" id="trigle-em-code18"></div>
                   </div>
-                  <div class="options-container options-container5 options-container-form">
+                  <div id="options-container5" class="options-container options-container5 options-container-form">
 
-                    <div class="option option-selected option5">
-                      <input type="radio" class="radio" id="em-working" name="em-status" />
-                      <label for="em-working">Đang làm việc</label>
-                    </div>
-                    <div class="option option5">
-                      <input type="radio" class="radio" id="em-retỉed" name="em-status" />
-                      <label for="em-retỉed">Đã nghỉ việc</label>
-                    </div>
+
 
                   </div>
                 </div>
@@ -428,14 +414,15 @@
       </div>
     </div>
     <div class="i-btn">
-      <div class="a-btn cancel" onclick="warningCloseForm()">Hủy</div>
-      <input type="button" class="a-btn btn-content" value="Lưu" onclick="postValue()">
+      <div id="div-hidden" tabindex="19"></div>
+      <button tabindex="17" class="a-btn cancel" onclick="warningCloseForm()">Hủy</button>
+      <input tabindex="18" type="button" class="a-btn btn-content" value="Lưu" onclick="postValue()">
 
     </div>
   </div>
-  
+
   <div class="background-form" id="b-form"></div>
-  
+
   <div class="pop-up" id="pop-up">
     <div class="pop-up-title" id="pop-up-title"></div>
     <div class="pop-up-content">
@@ -452,15 +439,17 @@
   <div id="toast"></div>
 </body>
 <script src="../../js/common/jquery-3.6.0.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="../../js/common/toast.js"></script>
 <script src="../../js/common/common.js"></script>
 <script src="../../js/common/popup.js"></script>
 
-
+<script type="text/javascript" src="../../js/page/employee/form.js"></script>
 <script src="../../js/common/table.js"></script>
-<script src="../../js/common/eventform.js"></script>
 
 <script src="../../js/page/employee/input.js"></script>
 <script type="text/javascript" src="../../js/page/employee/select.js"></script>
-<script type="text/javascript" src="../../js/page/employee/form.js"></script>
+
+<script src="../../js/common/eventform.js"></script>
+
 </html>

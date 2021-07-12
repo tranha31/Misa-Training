@@ -18,11 +18,13 @@
     border: 1px solid #bbbbbb;
     line-height: 40px;
     padding-left: 16px;
-    cursor: pointer;
     display: flex;
 }
 .selected-active{
     border-color: #019160;
+}
+.selected-error{
+    border-color: #FF4747 !important;
 }
 .selected .content-selected{
     width: calc(100% - 71px); 
@@ -152,4 +154,7 @@
     background-repeat: no-repeat;
     background-size: 16px;
     background-position: 16px center;
+}
+.option-hover{
+    background-color: #e9ebee !important;
 }
